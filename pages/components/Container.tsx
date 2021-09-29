@@ -1,3 +1,4 @@
+import { useTheme } from 'next-themes'
 import { useState } from 'react'
 
 interface ContainerProps {
@@ -6,15 +7,19 @@ interface ContainerProps {
 
 const Container: React.FC<ContainerProps> = ({ children }) => {
   const [selected, setSelected] = useState('home')
-  const [dark, setDark] = useState('dark')
+  const { resolvedTheme, setTheme } = useTheme()
   return (
     <div className="pt-12 flex flex-col">
-      <nav className="p-6 flex  lg:px-72 md:px-12 justify-between  items-center w-full sticky top-0 bg-eerie-black">
+      <nav className="p-6 flex  lg:px-72 md:px-12 justify-between  items-center w-full sticky top-0 dark:bg-eerie-black bg-white">
         <div
-          className="bg-gray-800 p-2 rounded-sm hover:bg-gray-700 cursor-pointer active:transform  active:scale-110 transition duration-150  ease-out"
-          onClick={() => setDark(`${dark === 'dark' ? 'light' : 'dark'}`)}
+          className={` ${
+            resolvedTheme === 'dark' ? 'bg-gray-800' : 'bg-gray-200'
+          } p-2 rounded-sm cursor-pointer active:transform  active:scale-110 transition duration-150  ease-out`}
+          onClick={() =>
+            setTheme(`${resolvedTheme === 'dark' ? 'light' : 'dark'}`)
+          }
         >
-          {dark === 'dark' ? (
+          {resolvedTheme === 'dark' ? (
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-6 w-6 fill-current text-white"
@@ -32,7 +37,7 @@ const Container: React.FC<ContainerProps> = ({ children }) => {
           ) : (
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6 fill-current text-white"
+              className="h-6 w-6 fill-current text-gray-800"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -46,11 +51,12 @@ const Container: React.FC<ContainerProps> = ({ children }) => {
             </svg>
           )}
         </div>
-        <div className="text-white flex space-x-8">
+        <div className="dark:text-white text-black flex space-x-8">
           <a
             href="#home"
             className={`${
-              selected === 'home' && 'border-b pb-1'
+              selected === 'home' &&
+              'border-b dark:border-white border-black pb-1'
             } cursor-pointer`}
             onClick={() => {
               scrollTo({
@@ -64,7 +70,8 @@ const Container: React.FC<ContainerProps> = ({ children }) => {
           <a
             href="#projects"
             className={`${
-              selected === 'projects' && 'border-b pb-1'
+              selected === 'projects' &&
+              'border-b dark:border-white border-black pb-1'
             } cursor-pointer`}
             onClick={() => setSelected('projects')}
           >
@@ -73,7 +80,8 @@ const Container: React.FC<ContainerProps> = ({ children }) => {
           <a
             href="#timeline"
             className={`${
-              selected === 'timeline' && 'border-b pb-1'
+              selected === 'timeline' &&
+              'border-b  dark:border-white border-black pb-1'
             } cursor-pointer`}
             onClick={() => setSelected('timeline')}
           >

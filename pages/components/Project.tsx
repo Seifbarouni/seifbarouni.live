@@ -19,11 +19,13 @@ const Project: React.FC<ProjectProps> = ({
     <a
       href={link}
       target="_blank"
-      className="border border-gray-700 border-opacity-50 rounded-sm p-3  cursor-pointer flex flex-col space-y-2"
+      className="border dark:border-gray-700 border-gray-400 border-opacity-50 rounded-sm p-3  cursor-pointer flex flex-col space-y-2"
     >
       <div className="flex items-center justify-between">
-        <h1 className="text-white text-lg font-semibold">{title}</h1>
-        <span className="flex items-center space-x-1 text-red-300">
+        <h1 className="dark:text-white text-black text-lg font-semibold">
+          {title}
+        </h1>
+        <span className="flex items-center space-x-1 dark:text-red-300 text-red-500">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-5 w-5"
@@ -35,10 +37,14 @@ const Project: React.FC<ProjectProps> = ({
           <span>{stars}</span>
         </span>
       </div>
-      <p className="text-gray-400 text-sm">{description}</p>
+      <p className="dark:text-gray-400 text-gray-600 text-sm">{description}</p>
       <div>
-        <span className="text-white font-semibold">- What I learned : </span>
-        <span className="text-gray-400">{learned?.join(', ')}</span>
+        <span className="dark:text-white text-black font-semibold">
+          - What I learned :{' '}
+        </span>
+        <span className="dark:text-gray-400 text-gray-600">
+          {learned?.join(', ')}
+        </span>
       </div>
     </a>
   )
