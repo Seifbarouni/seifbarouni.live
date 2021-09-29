@@ -17,15 +17,13 @@ class MyDocument extends Document {
       <Html>
         <Head>
           <link
-            rel="preload"
-            href="/fonts/inter-var-latin.woff2"
-            as="font"
-            type="font/woff2"
-            crossOrigin="anonymous"
+            href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+            rel="stylesheet"
           />
           <link rel="shortcut icon" href="/favicon.svg" type="image/x-icon" />
         </Head>
         <body className="bg-eerie-black">
+          <div className="h-2 bg-gradient-to-r from-blue-500 via-red-500 to-pink-500" />
           <Main />
           <NextScript />
         </body>

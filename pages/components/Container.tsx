@@ -4,14 +4,14 @@ interface ContainerProps {
   children: any
 }
 
-export const Container: React.FC<ContainerProps> = ({ children }) => {
+const Container: React.FC<ContainerProps> = ({ children }) => {
   const [selected, setSelected] = useState('home')
   const [dark, setDark] = useState('dark')
   return (
     <div className="pt-12 flex flex-col">
-      <nav className="p-6 flex  lg:px-72 md:px-12 justify-between  items-center w-full">
+      <nav className="p-6 flex  lg:px-72 md:px-12 justify-between  items-center w-full sticky top-0 bg-eerie-black">
         <div
-          className="bg-gray-800 p-2 rounded-xl hover:bg-gray-700 cursor-pointer active:transform  active:scale-110 transition duration-150  ease-out"
+          className="bg-gray-800 p-2 rounded-sm hover:bg-gray-700 cursor-pointer active:transform  active:scale-110 transition duration-150  ease-out"
           onClick={() => setDark(`${dark === 'dark' ? 'light' : 'dark'}`)}
         >
           {dark === 'dark' ? (
@@ -52,7 +52,12 @@ export const Container: React.FC<ContainerProps> = ({ children }) => {
             className={`${
               selected === 'home' && 'border-b pb-1'
             } cursor-pointer`}
-            onClick={() => setSelected('home')}
+            onClick={() => {
+              scrollTo({
+                top: 0,
+              })
+              setSelected('home')
+            }}
           >
             Home
           </a>
@@ -83,3 +88,5 @@ export const Container: React.FC<ContainerProps> = ({ children }) => {
     </div>
   )
 }
+
+export default Container

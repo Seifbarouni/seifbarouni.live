@@ -5,7 +5,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'eerie-black': '#110c11'
+        'eerie-black': '#110c11',
+        'cyan': '#00ffff'
       }
     },
   },
