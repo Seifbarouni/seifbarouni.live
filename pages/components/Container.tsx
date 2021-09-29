@@ -47,30 +47,33 @@ export const Container: React.FC<ContainerProps> = ({ children }) => {
           )}
         </div>
         <div className="text-white flex space-x-8">
-          <span
+          <a
+            href="#home"
             className={`${
               selected === 'home' && 'border-b pb-1'
             } cursor-pointer`}
             onClick={() => setSelected('home')}
           >
             Home
-          </span>
-          <span
+          </a>
+          <a
+            href="#projects"
             className={`${
               selected === 'projects' && 'border-b pb-1'
             } cursor-pointer`}
             onClick={() => setSelected('projects')}
           >
             Projects
-          </span>
-          <span
+          </a>
+          <a
+            href="#timeline"
             className={`${
               selected === 'timeline' && 'border-b pb-1'
             } cursor-pointer`}
             onClick={() => setSelected('timeline')}
           >
             Timeline
-          </span>
+          </a>
         </div>
       </nav>
       <main className="flex flex-col justify-center px-8">

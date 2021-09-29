@@ -23,6 +23,7 @@ class MyDocument extends Document {
             type="font/woff2"
             crossOrigin="anonymous"
           />
+          <link rel="shortcut icon" href="/favicon.svg" type="image/x-icon" />
         </Head>
         <body className="bg-eerie-black">
           <Main />

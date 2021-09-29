@@ -1,12 +1,11 @@
 import Head from 'next/head'
-
 import { Container } from './components/Container'
 
 export default function Home() {
   return (
     <Container>
       <Head>
-        <title>Seif Barouni</title>
+        <title>Seif Barouni - Developer</title>
       </Head>
       <div className="flex flex-col xl:px-96 lg:px-72 md:px-16 justify-center items-start">
         <h1 className="text-3xl md:text-5xl text-white font-semibold pt-6">
