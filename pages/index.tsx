@@ -13,7 +13,7 @@ export default function Home() {
       </Head>
       <div className="flex flex-col  lg:px-72 md:px-16 justify-center">
         <h1 className="text-3xl md:text-5xl dark:text-white text-black font-bold pt-6">
-          Hey, I'm Seif Barouni
+          Hi, I'm Seif Barouni
         </h1>
         <h2 className="text-gray-600 dark:text-gray-400 pt-4 ml-0.5 md:w-11/12 mb-16">
           I'm a computer science student and a web developer from Tunisia 🇹🇳. I

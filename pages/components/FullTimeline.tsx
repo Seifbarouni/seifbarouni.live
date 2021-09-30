@@ -4,12 +4,12 @@ interface YearProps {
 }
 interface AchievementProps {
   title: string
-  children?: any
+  children?: React.ReactNode
 }
 
 const Hr = () => {
   return (
-    <div className="border border-gray-200 dark:border-gray-600 w-full my-8" />
+    <div className="border border-gray-300 dark:border-gray-600 w-full my-8" />
   )
 }
 
@@ -53,7 +53,7 @@ const Achievement: React.FC<AchievementProps> = ({ title, children }) => {
         </svg>
         <p className="text-gray-900 dark:text-gray-100">{title}</p>
       </div>
-      <p className="text-gray-700 dark:text-gray-400 ml-6">{children}</p>
+      <p className="text-gray-600 dark:text-gray-400 ml-6">{children}</p>
     </li>
   )
 }
