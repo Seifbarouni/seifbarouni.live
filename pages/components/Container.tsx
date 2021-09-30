@@ -1,19 +1,45 @@
+import Link from 'next/link'
+
 import { useTheme } from 'next-themes'
 import { useEffect, useState } from 'react'
+import Footer from './Footer'
 
 interface ContainerProps {
   children: any
+  selected: string
 }
 
-const Container: React.FC<ContainerProps> = ({ children }) => {
-  const [selected, setSelected] = useState('home')
+const Container: React.FC<ContainerProps> = ({ children, selected }) => {
   const [isMounted, setMounted] = useState(false)
   const { resolvedTheme, setTheme } = useTheme()
 
   useEffect(() => setMounted(true), [])
   return (
     <div className="pt-12 flex flex-col">
-      <nav className="p-6 flex  lg:px-72 md:px-12 justify-between  items-center w-full sticky top-0 dark:bg-eerie-black bg-white">
+      <nav className="p-6 flex  lg:px-72 md:px-14 justify-between  items-center w-full sticky top-0 dark:bg-eerie-black bg-white">
+        <div className="dark:text-white text-black flex space-x-8">
+          <Link href="/">
+            <div
+              className={`${
+                selected === 'home' &&
+                'border-b dark:border-white border-black pb-1'
+              } cursor-pointer`}
+            >
+              Home
+            </div>
+          </Link>
+          <Link href="/timeline">
+            <div
+              className={`${
+                selected === 'timeline' &&
+                'border-b  dark:border-white border-black pb-1'
+              } cursor-pointer`}
+            >
+              Timeline
+            </div>
+          </Link>
+        </div>
+
         {isMounted && (
           <div
             className={` ${
@@ -56,48 +82,9 @@ const Container: React.FC<ContainerProps> = ({ children }) => {
             )}
           </div>
         )}
-        <div className="dark:text-white text-black flex space-x-8">
-          <a
-            href="#home"
-            className={`${
-              selected === 'home' &&
-              'border-b dark:border-white border-black pb-1'
-            } cursor-pointer`}
-            onClick={() => {
-              scrollTo({
-                top: 0,
-              })
-              setSelected('home')
-            }}
-          >
-            Home
-          </a>
-          <a
-            href="#projects"
-            className={`${
-              selected === 'projects' &&
-              'border-b dark:border-white border-black pb-1'
-            } cursor-pointer`}
-            onClick={() => setSelected('projects')}
-          >
-            Projects
-          </a>
-          <a
-            href="#timeline"
-            className={`${
-              selected === 'timeline' &&
-              'border-b  dark:border-white border-black pb-1'
-            } cursor-pointer`}
-            onClick={() => setSelected('timeline')}
-          >
-            Timeline
-          </a>
-        </div>
       </nav>
-      <main className="flex flex-col justify-center px-8">
-        {children}
-        <footer></footer>
-      </main>
+      <main className="flex flex-col justify-center px-8">{children}</main>
+      <Footer />
     </div>
   )
 }

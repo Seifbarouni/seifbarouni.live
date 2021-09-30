@@ -16,10 +16,6 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          <link
-            href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
-            rel="stylesheet"
-          />
           <link rel="shortcut icon" href="/favicon.svg" type="image/x-icon" />
         </Head>
         <body className="dark:bg-eerie-black bg-white">

@@ -1,15 +1,17 @@
 import Head from 'next/head'
 
 import Container from './components/Container'
+import Education from './components/Education'
 import RecentProjects from './components/RecentProjects'
+import WorkExperience from './components/WorkExperience'
 
 export default function Home() {
   return (
-    <Container>
+    <Container selected="home">
       <Head>
         <title>Seif Barouni - Developer</title>
       </Head>
-      <div className="flex flex-col xl:px-96 lg:px-72 md:px-16 justify-center items-start">
+      <div className="flex flex-col  lg:px-72 md:px-16 justify-center">
         <h1 className="text-3xl md:text-5xl dark:text-white text-black font-bold pt-6">
           Hey, I'm Seif Barouni
         </h1>
@@ -34,12 +36,11 @@ export default function Home() {
         <h1 className="text-3xl md:text-4xl dark:text-white text-black font-bold">
           Work experience
         </h1>
-        <p className="text-gray-600 dark:text-gray-400 mb-16 pt-4">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum,
-          officiis? Similique officia repellat error, nihil molestiae
-          cupiditate? Totam impedit fugit ullam, eligendi doloribus, modi
-          recusandae porro blanditiis nulla excepturi amet?
-        </p>
+        <WorkExperience />
+        <h1 className="text-3xl md:text-4xl dark:text-white text-black font-bold">
+          Education
+        </h1>
+        <Education />
       </div>
     </Container>
   )
