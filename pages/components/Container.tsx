@@ -3,6 +3,9 @@ import Link from 'next/link'
 import { useTheme } from 'next-themes'
 import { useEffect, useState } from 'react'
 import Footer from './Footer'
+import MyTerminal from './MyTerminal'
+import { useOutsideAlerter } from '../hooks/useOutsideAlerter'
+import { motion } from 'framer-motion'
 
 interface ContainerProps {
   children: React.ReactNode
@@ -12,11 +15,12 @@ interface ContainerProps {
 const Container: React.FC<ContainerProps> = ({ children, selected }) => {
   const [isMounted, setMounted] = useState(false)
   const { resolvedTheme, setTheme } = useTheme()
+  const { ref, isOpen, setOpen } = useOutsideAlerter(false)
 
   useEffect(() => setMounted(true), [])
   return (
-    <div className="pt-12 flex flex-col">
-      <nav className="p-6 flex  lg:px-72 md:px-14 justify-between items-center w-full sticky top-0 dark:bg-eerie-black bg-gray-100">
+    <div className=" flex flex-col relative">
+      <nav className="p-8 flex  lg:px-72 md:px-14 justify-between items-center w-full sticky top-2 dark:bg-eerie-black bg-gray-100">
         <div className="dark:text-white text-black flex space-x-8">
           <Link href="/">
             <div
@@ -46,6 +50,7 @@ const Container: React.FC<ContainerProps> = ({ children, selected }) => {
               className={` ${
                 resolvedTheme === 'dark' ? 'bg-gray-800' : 'bg-gray-300'
               } p-2 rounded-sm cursor-pointer active:transform  active:scale-110 transition duration-150  ease-out hidden sm:inline-flex`}
+              onClick={() => setOpen(true)}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -108,6 +113,27 @@ const Container: React.FC<ContainerProps> = ({ children, selected }) => {
         )}
       </nav>
       <main className="flex flex-col justify-center px-8">{children}</main>
+      {isOpen && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.1 }}
+          className="min-h-screen  fixed  left-0 top-0  flex justify-center items-center inset-0 z-50 "
+        >
+          <div className="absolute dark:bg-gray-800 bg-black opacity-60 inset-0 z-0"></div>
+          <motion.div
+            drag
+            initial={{ y: 50 }}
+            animate={{ y: 0 }}
+            exit={{ y: 30 }}
+            ref={ref}
+            className="w-full max-w-2xl z-50 max-h-80 overflow-y-scroll scrollbar-none"
+          >
+            <MyTerminal setOpen={setOpen} />
+          </motion.div>
+        </motion.div>
+      )}
       <Footer />
     </div>
   )

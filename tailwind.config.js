@@ -6,12 +6,13 @@ module.exports = {
     extend: {
       colors: {
         'eerie-black': '#110c11',
-        'cyan': '#00ffff'
       }
     },
   },
   variants: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    require("tailwindcss-no-scrollbar"),
+  ],
 }
