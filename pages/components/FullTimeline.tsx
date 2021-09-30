@@ -1,6 +1,6 @@
 interface FullTimelineProps {}
 interface YearProps {
-  children: any
+  children: string
 }
 interface AchievementProps {
   title: string

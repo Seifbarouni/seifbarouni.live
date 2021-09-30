@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react'
 import Footer from './Footer'
 
 interface ContainerProps {
-  children: any
+  children: React.ReactChildren
   selected: string
 }
 
