@@ -110,7 +110,7 @@ const FullTimeline: React.FC<FullTimelineProps> = ({}) => {
           >
             Go programming language.
           </a>{' '}
-          By getting my hand dirty with servers and APIs, I learned about
+          By getting my hands dirty with servers and APIs, I learned about
           authentication, cookies, sessions and ORMs.
         </Achievement>
         <Achievement title="Learned the basics of the web (HTML, CSS and VanillaJS)">

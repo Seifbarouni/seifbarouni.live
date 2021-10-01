@@ -23,7 +23,7 @@ const commands = (setOpen: Dispatch<SetStateAction<boolean>>) => {
       description: 'Description about me',
       usage: 'about',
       fn: () => {
-        return "I'm a computer science student and a web developer from Tunisia 🇹🇳. I love creating new things with technology. I'm currently trying to improve my english and learning mobile development using React Native."
+        return "I'm a computer science student and a full stack web developer. I'm currently interested in learning more about compilers and transpilers."
       },
     },
     pr: {
@@ -42,9 +42,16 @@ const commands = (setOpen: Dispatch<SetStateAction<boolean>>) => {
     },
     exp: {
       description: 'My work experience',
-      usage: 'ed',
+      usage: 'exp',
       fn: () => {
         return 'Jul 2021 - Sep 2021 : Software development intern at OnePack 👨🏻‍💻'
+      },
+    },
+    contact: {
+      description: 'My email',
+      usage: 'contact',
+      fn: () => {
+        return 'seif.barouni11@gmail.com'
       },
     },
   }

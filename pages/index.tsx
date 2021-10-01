@@ -16,16 +16,8 @@ export default function Home() {
           Hi, I'm Seif Barouni
         </h1>
         <h2 className="text-gray-600 dark:text-gray-400 pt-4 ml-0.5 md:w-11/12 mb-16">
-          I'm a computer science student and a web developer from Tunisia 🇹🇳. I
-          love creating new things with technology. I'm currently trying to
-          improve my english and learning mobile development using
-          <a
-            className="underline text-blue-500 ml-1"
-            target="_blank"
-            href="https://reactnative.dev/"
-          >
-            React Native.
-          </a>
+          I'm a computer science student and a full stack web developer. I'm
+          currently interested in learning more about compilers and transpilers.
         </h2>
         <h1 className="text-3xl md:text-4xl dark:text-white text-black font-bold">
           My recent projects
