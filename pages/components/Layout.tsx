@@ -42,6 +42,16 @@ const Layout: React.FC<LayoutProps> = ({ children, selected }) => {
               Timeline
             </div>
           </Link>
+          <Link href="/articles">
+            <div
+              className={`${
+                selected === 'articles' &&
+                'border-b  dark:border-white border-black pb-1'
+              } cursor-pointer`}
+            >
+              Articles
+            </div>
+          </Link>
         </div>
 
         {isMounted && (
