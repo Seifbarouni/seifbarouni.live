@@ -1,18 +1,18 @@
 import Link from 'next/link'
-
+import { motion } from 'framer-motion'
 import { useTheme } from 'next-themes'
 import { useEffect, useState } from 'react'
+
 import Footer from './Footer'
 import MyTerminal from './MyTerminal'
-import { useOutsideAlerter } from '../hooks/useOutsideAlerter'
-import { motion } from 'framer-motion'
+import { useOutsideAlerter } from '../../utils/hooks/useOutsideAlerter'
 
-interface ContainerProps {
+interface LayoutProps {
   children: React.ReactNode
   selected: string
 }
 
-const Container: React.FC<ContainerProps> = ({ children, selected }) => {
+const Layout: React.FC<LayoutProps> = ({ children, selected }) => {
   const [isMounted, setMounted] = useState(false)
   const { resolvedTheme, setTheme } = useTheme()
   const { ref, isOpen, setOpen } = useOutsideAlerter(false)
@@ -139,4 +139,4 @@ const Container: React.FC<ContainerProps> = ({ children, selected }) => {
   )
 }
 
-export default Container
+export default Layout

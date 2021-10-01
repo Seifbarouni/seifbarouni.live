@@ -1,11 +1,11 @@
 import Head from 'next/head'
 
-import Container from './components/Container'
+import Layout from './components/Layout'
 import FullTimeline from './components/FullTimeline'
 
 export default function timeline() {
   return (
-    <Container selected="timeline">
+    <Layout selected="timeline">
       <Head>
         <title>Seif Barouni - Developer</title>
       </Head>
@@ -15,6 +15,6 @@ export default function timeline() {
         </h1>
         <FullTimeline />
       </div>
-    </Container>
+    </Layout>
   )
 }

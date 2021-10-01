@@ -1,13 +1,13 @@
 import Head from 'next/head'
 
-import Container from './components/Container'
+import Layout from './components/Layout'
 import Education from './components/Education'
 import RecentProjects from './components/RecentProjects'
 import WorkExperience from './components/WorkExperience'
 
 export default function Home() {
   return (
-    <Container selected="home">
+    <Layout selected="home">
       <Head>
         <title>Seif Barouni - Developer</title>
       </Head>
@@ -42,6 +42,6 @@ export default function Home() {
         </h1>
         <Education />
       </div>
-    </Container>
+    </Layout>
   )
 }
