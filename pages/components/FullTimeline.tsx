@@ -35,23 +35,19 @@ const BigDivider = () => {
 
 const Achievement: React.FC<AchievementProps> = ({ title, children }) => {
   return (
-    <li className="mb-4 ml-2">
-      <div className="flex items-center mb-2 text-green-600 dark:text-green-300">
+    <li className="mb-4">
+      <div className="flex items-center mb-2">
         <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="h-5 w-5 mr-1"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
+          viewBox="0 0 512 512"
+          className="h-4 mt-0.5 fill-current text-blue-500"
         >
+          <path d="m256 0c-141.164062 0-256 114.835938-256 256s114.835938 256 256 256 256-114.835938 256-256-114.835938-256-256-256zm0 0" />
           <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+            d="m385.75 201.75-138.667969 138.664062c-4.160156 4.160157-9.621093 6.253907-15.082031 6.253907s-10.921875-2.09375-15.082031-6.253907l-69.332031-69.332031c-8.34375-8.339843-8.34375-21.824219 0-30.164062 8.339843-8.34375 21.820312-8.34375 30.164062 0l54.25 54.25 123.585938-123.582031c8.339843-8.34375 21.820312-8.34375 30.164062 0 8.339844 8.339843 8.339844 21.820312 0 30.164062zm0 0"
+            fill="#fafafa"
           />
         </svg>
-        <p className="text-gray-900 dark:text-gray-100">{title}</p>
+        <p className="text-gray-900 dark:text-gray-100 ml-2">{title}</p>
       </div>
       <p className="text-gray-600 dark:text-gray-400 ml-6">{children}</p>
     </li>

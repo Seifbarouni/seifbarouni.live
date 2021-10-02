@@ -23,7 +23,7 @@ const Project: React.FC<ProjectProps> = ({
         <h1 className="dark:text-white text-black text-lg font-semibold">
           {title}
         </h1>
-        <span className="flex items-center space-x-1 dark:text-red-300 text-red-500">
+        <span className="flex items-center space-x-1 text-blue-500 dark:text-blue-400">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-5 w-5"
