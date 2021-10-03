@@ -1,3 +1,5 @@
+const defaultTheme = require('tailwindcss/defaultTheme');
+
 module.exports = {
   mode: 'jit',
   purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
@@ -6,6 +8,9 @@ module.exports = {
     extend: {
       colors: {
         'eerie-black': '#110c11',
+      },
+      fontFamily: {
+        sans: ['Inter', ...defaultTheme.fontFamily.sans]
       }
     },
   },
