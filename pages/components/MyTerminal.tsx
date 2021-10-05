@@ -60,11 +60,14 @@ const commands = (setOpen: Dispatch<SetStateAction<boolean>>) => {
 const MyTerminal: React.FC<MyTerminalProps> = ({ setOpen }) => {
   return (
     <div className="pb-2 bg-black rounded-sm flex flex-col relative">
-      <div className=" bg-gray-600 flex  justify-between  top-0 w-full sticky px-4 h-8 rounded-t-sm cursor-pointer">
-        <div className="mt-1 shadow-lg  rounded-t-sm px-6 bg-gray-500 text-white">
+      <div className=" bg-gray-600 flex  justify-between  top-0 w-full sticky  h-8 rounded-t-sm cursor-pointer">
+        <div className=" ml-4 mt-1 shadow-lg  rounded-t-sm px-6 bg-gray-500 text-white">
           <div className="mt-0.5">terminal</div>
         </div>
-        <div className="cursor-pointer mt-2" onClick={() => setOpen(false)}>
+        <div
+          className="cursor-pointer pt-2 hover:bg-red-600 h-full w-12 flex justify-center"
+          onClick={() => setOpen(false)}
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-4 w-4 text-white"
