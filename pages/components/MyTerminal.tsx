@@ -59,7 +59,28 @@ const commands = (setOpen: Dispatch<SetStateAction<boolean>>) => {
 
 const MyTerminal: React.FC<MyTerminalProps> = ({ setOpen }) => {
   return (
-    <div className="pt-1 pb-2 bg-black rounded-sm">
+    <div className="pb-2 bg-black rounded-sm flex flex-col relative">
+      <div className=" bg-gray-600 flex  justify-between  top-0 w-full sticky px-4 h-8 rounded-t-sm cursor-pointer">
+        <div className="mt-1 shadow-lg  rounded-t-sm px-6 bg-gray-500 text-white">
+          <div className="mt-0.5">terminal</div>
+        </div>
+        <div className="cursor-pointer mt-2" onClick={() => setOpen(false)}>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-4 w-4 text-white"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </div>
+      </div>
       <Terminal
         commands={commands(setOpen)}
         welcomeMessage={
