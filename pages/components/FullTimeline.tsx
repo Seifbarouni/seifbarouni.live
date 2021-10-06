@@ -35,11 +35,11 @@ const BigDivider = () => {
 
 const Achievement: React.FC<AchievementProps> = ({ title, children }) => {
   return (
-    <li className="mb-4">
-      <div className="flex items-center mb-2">
+    <li className="mb-4 flex">
+      <div className=" mb-2">
         <svg
           viewBox="0 0 512 512"
-          className="h-4 mt-0.5 fill-current text-blue-500"
+          className="h-4 md:mt-0.5 mt-1 fill-current text-blue-500"
         >
           <path d="m256 0c-141.164062 0-256 114.835938-256 256s114.835938 256 256 256 256-114.835938 256-256-114.835938-256-256-256zm0 0" />
           <path
@@ -47,9 +47,11 @@ const Achievement: React.FC<AchievementProps> = ({ title, children }) => {
             fill="#fafafa"
           />
         </svg>
-        <p className="text-gray-900 dark:text-gray-100 ml-2">{title}</p>
       </div>
-      <p className="text-gray-600 dark:text-gray-400 ml-6">{children}</p>
+      <div className="flex flex-col ml-2">
+        <p className="text-gray-900 dark:text-gray-100">{title}</p>
+        <p className="text-gray-600 dark:text-gray-400">{children}</p>
+      </div>
     </li>
   )
 }

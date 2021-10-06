@@ -11,7 +11,7 @@ export default function Home() {
       <Head>
         <title>Seif Barouni - Developer</title>
       </Head>
-      <div className="flex flex-col  lg:px-72 md:px-16 justify-center">
+      <div className="flex flex-col  xl:px-72 md:px-16 justify-center">
         <h1 className="text-3xl md:text-5xl dark:text-white text-black font-bold pt-6">
           Hi, I'm Seif Barouni
         </h1>

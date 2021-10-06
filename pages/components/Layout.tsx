@@ -20,7 +20,7 @@ const Layout: React.FC<LayoutProps> = ({ children, selected }) => {
   useEffect(() => setMounted(true), [])
   return (
     <div className=" flex flex-col relative">
-      <nav className="p-8 flex  lg:px-72 md:px-14 justify-between items-center w-full sticky top-2 dark:bg-eerie-black bg-gray-100">
+      <nav className="p-8 flex  xl:px-72 md:px-14 justify-between items-center w-full sticky top-2 dark:bg-eerie-black bg-gray-100">
         <div className="dark:text-white text-black flex space-x-8">
           <Link href="/">
             <div

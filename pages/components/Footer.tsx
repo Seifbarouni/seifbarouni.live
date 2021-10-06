@@ -9,18 +9,18 @@ const Footer: React.FC<FooterProps> = () => {
           This website is built with{' '}
           <a
             target="_blank"
-            href="https://tailwindcss.com/"
-            className="underline text-blue-500"
-          >
-            Tailwindcss
-          </a>{' '}
-          and{' '}
-          <a
-            target="_blank"
             href=" https://nextjs.org/"
             className="underline text-blue-500"
           >
             Nextjs
+          </a>{' '}
+          and{' '}
+          <a
+            target="_blank"
+            href="https://tailwindcss.com/"
+            className="underline text-blue-500"
+          >
+            Tailwindcss
           </a>{' '}
         </span>
       </div>
