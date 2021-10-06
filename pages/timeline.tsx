@@ -1,7 +1,7 @@
 import Head from 'next/head'
 
-import Layout from './components/Layout'
-import FullTimeline from './components/FullTimeline'
+import Layout from '../components/shared/Layout'
+import FullTimeline from '../components/timeline/FullTimeline'
 
 export default function timeline() {
   return (

@@ -1,9 +1,9 @@
 import Head from 'next/head'
 
-import Layout from './components/Layout'
-import Education from './components/Education'
-import RecentProjects from './components/RecentProjects'
-import WorkExperience from './components/WorkExperience'
+import Layout from '../components/shared/Layout'
+import Education from '../components/home/Education'
+import RecentProjects from '../components/home/RecentProjects'
+import WorkExperience from '../components/home/WorkExperience'
 
 export default function Home() {
   return (
