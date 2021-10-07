@@ -59,7 +59,7 @@ const commands = (setOpen: Dispatch<SetStateAction<boolean>>) => {
 
 const MyTerminal: React.FC<MyTerminalProps> = ({ setOpen }) => {
   return (
-    <div className="pb-2 bg-black rounded-sm flex flex-col relative">
+    <div className="pb-2 bg-black rounded-lg flex flex-col relative">
       <div className=" bg-gray-600 flex  justify-between  top-0 w-full sticky  h-8 rounded-t-sm cursor-pointer">
         <div className=" ml-4 mt-1 shadow-lg  rounded-t-sm px-6 bg-gray-500 text-white">
           <div className="mt-0.5">terminal</div>
