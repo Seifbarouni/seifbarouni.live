@@ -59,7 +59,7 @@ const Layout: React.FC<LayoutProps> = ({ children, selected }) => {
             <div
               className={` ${
                 resolvedTheme === 'dark' ? 'bg-gray-800' : 'bg-gray-300'
-              } p-2 rounded-sm cursor-pointer active:transform  active:scale-110 transition duration-150  ease-out hidden sm:inline-flex`}
+              } p-2 rounded-lg cursor-pointer active:transform  active:scale-110 transition duration-150  ease-out hidden sm:inline-flex`}
               onClick={() => setOpen(true)}
             >
               <svg
@@ -82,7 +82,7 @@ const Layout: React.FC<LayoutProps> = ({ children, selected }) => {
             <div
               className={` ${
                 resolvedTheme === 'dark' ? 'bg-gray-800' : 'bg-gray-300'
-              } p-2 rounded-sm cursor-pointer active:transform  active:scale-110 transition duration-150  ease-out`}
+              } p-2 rounded-lg cursor-pointer active:transform  active:scale-110 transition duration-150  ease-out`}
               onClick={() =>
                 setTheme(`${resolvedTheme === 'dark' ? 'light' : 'dark'}`)
               }

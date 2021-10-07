@@ -17,7 +17,7 @@ const Project: React.FC<ProjectProps> = ({
     <a
       href={link}
       target="_blank"
-      className="border dark:border-gray-700 border-gray-400 border-opacity-50 rounded-sm p-3  cursor-pointer flex flex-col space-y-2 shadow-sm"
+      className="border dark:border-gray-700 border-gray-400 border-opacity-50 rounded-md p-3  cursor-pointer flex flex-col space-y-2 shadow-sm"
     >
       <div className="flex items-center justify-between">
         <h1 className="dark:text-white text-black text-lg font-semibold">
