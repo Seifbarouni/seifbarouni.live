@@ -21,13 +21,13 @@ const Layout: React.FC<LayoutProps> = ({ children, selected }) => {
   return (
     <div className=" flex flex-col relative">
       <nav className="p-8 flex  xl:px-72 md:px-14 justify-between items-center w-full sticky top-2 dark:bg-eerie-black bg-gray-100">
-        <div className="dark:text-white text-black flex space-x-8">
+        <div className="dark:text-white text-black flex space-x-6">
           <Link href="/">
             <div
               className={`${
                 selected === 'home' &&
                 'border-b dark:border-white border-black pb-1'
-              } cursor-pointer`}
+              } cursor-pointer  rounded-t-lg px-2`}
             >
               Home
             </div>
@@ -37,7 +37,7 @@ const Layout: React.FC<LayoutProps> = ({ children, selected }) => {
               className={`${
                 selected === 'timeline' &&
                 'border-b  dark:border-white border-black pb-1'
-              } cursor-pointer`}
+              } cursor-pointer px-2`}
             >
               Timeline
             </div>
@@ -47,7 +47,7 @@ const Layout: React.FC<LayoutProps> = ({ children, selected }) => {
               className={`${
                 selected === 'articles' &&
                 'border-b  dark:border-white border-black pb-1'
-              } cursor-pointer`}
+              } cursor-pointer px-2`}
             >
               Articles
             </div>
