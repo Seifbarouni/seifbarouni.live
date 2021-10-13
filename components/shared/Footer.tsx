@@ -7,7 +7,7 @@ const Footer: React.FC<FooterProps> = () => {
       id="footer"
     >
       <hr className="w-full border-1 border-gray-300 dark:border-gray-800 mb-8" />
-      <div className="flex items-center">
+      <div className="flex items-center justify-center">
         <span>
           This website is built with{' '}
           <a
