@@ -89,7 +89,7 @@ const MyTerminal: React.FC<MyTerminalProps> = ({ setOpen }) => {
         welcomeMessage={
           'Welcome to my terminal! Type "help" to see the options'
         }
-        autoFocus={true}
+        autoFocus
         promptLabel={'terminal@user:/$'}
         promptLabelStyle={{
           color: '#bcf737',

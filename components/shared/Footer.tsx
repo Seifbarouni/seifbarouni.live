@@ -2,7 +2,10 @@ interface FooterProps {}
 
 const Footer: React.FC<FooterProps> = () => {
   return (
-    <footer className=" flex flex-col justify-center items-center lg:px-72 md:px-14 w-full mb-8 dark:text-gray-400 text-gray-600">
+    <footer
+      className=" flex flex-col justify-center items-center lg:px-72 md:px-14 w-full mb-8 dark:text-gray-400 text-gray-600"
+      id="footer"
+    >
       <hr className="w-full border-1 border-gray-300 dark:border-gray-800 mb-8" />
       <div className="flex items-center">
         <span>

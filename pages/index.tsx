@@ -18,7 +18,14 @@ export default function Home() {
         <h2 className="text-gray-600 dark:text-gray-400 pt-4 ml-0.5 md:w-11/12 mb-16">
           I'm a computer science student and a full stack web developer. I'm
           currently interested in learning more about compilers and transpilers.
-          I'm also open for work if you need a web app.
+          I'm also open for work if you need a web app. You can find my contact
+          details{' '}
+          <a
+            href="#footer"
+            className="text-blue-500 underline hover:cursor-pointer"
+          >
+            below.
+          </a>
         </h2>
         <h1 className="text-3xl md:text-4xl dark:text-white text-black font-bold">
           My recent projects
