@@ -61,6 +61,10 @@ const FullTimeline: React.FC<FullTimelineProps> = ({}) => {
     <div className="pt-8 pb-8 w-11/12">
       <Year>2021</Year>
       <ul>
+        <Achievement title="Joined Optima Junior Entreprise">
+          Optima JE is a company that helps companies make their digital
+          presence on the Internet.
+        </Achievement>
         <Achievement title="Started my third year of computer science">
           Learned more about advanced algorithms, compilation and software
           architecture.
