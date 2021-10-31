@@ -14,10 +14,19 @@ interface LayoutProps {
 
 const Layout: React.FC<LayoutProps> = ({ children, selected }) => {
   const [isMounted, setMounted] = useState(false)
+  const [isMobile, setMobile] = useState(false)
   const { resolvedTheme, setTheme } = useTheme()
   const { ref, isOpen, setOpen } = useOutsideAlerter(false)
 
-  useEffect(() => setMounted(true), [])
+  useEffect(() => {
+    setMounted(true)
+    if (
+      /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+        navigator.userAgent
+      )
+    )
+      setMobile(true)
+  }, [])
   return (
     <div className=" flex flex-col relative">
       <nav className="p-8 flex  xl:px-72 md:px-14 justify-between items-center w-full sticky top-2 dark:bg-eerie-black bg-gray-100">
@@ -46,29 +55,31 @@ const Layout: React.FC<LayoutProps> = ({ children, selected }) => {
 
         {isMounted && (
           <div className="flex space-x-2">
-            <div
-              className={` ${
-                resolvedTheme === 'dark' ? 'bg-gray-800' : 'bg-gray-300'
-              } p-2 rounded-lg cursor-pointer active:transform  active:scale-110 transition duration-150  ease-out hidden sm:inline-flex`}
-              onClick={() => setOpen(true)}
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className={`h-6 w-6  ${
-                  resolvedTheme === 'dark' ? 'text-white' : 'text-gray-800'
-                } `}
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
+            {!isMobile && (
+              <div
+                className={` ${
+                  resolvedTheme === 'dark' ? 'bg-gray-800' : 'bg-gray-300'
+                } p-2 rounded-lg cursor-pointer active:transform  active:scale-110 transition duration-150  ease-out hidden sm:inline-flex`}
+                onClick={() => setOpen(true)}
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
-                />
-              </svg>
-            </div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className={`h-6 w-6  ${
+                    resolvedTheme === 'dark' ? 'text-white' : 'text-gray-800'
+                  } `}
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                  />
+                </svg>
+              </div>
+            )}
             <div
               className={` ${
                 resolvedTheme === 'dark' ? 'bg-gray-800' : 'bg-gray-300'
