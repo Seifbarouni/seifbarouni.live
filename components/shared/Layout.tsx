@@ -29,7 +29,7 @@ const Layout: React.FC<LayoutProps> = ({ children, selected }) => {
   }, [])
   return (
     <div className=" flex flex-col relative">
-      <nav className="p-8 flex  xl:px-72 md:px-14 justify-between items-center w-full sticky top-2 dark:bg-eerie-black bg-gray-100">
+      <nav className="p-8 flex  xl:px-72 md:px-14 justify-between items-center w-full sticky top-2 dark:bg-eerie-black bg-gray-100 z-50">
         <div className="dark:text-white text-black flex space-x-2">
           <Link href="/">
             <div
