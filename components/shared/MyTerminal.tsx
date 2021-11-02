@@ -37,7 +37,7 @@ const commands = (setOpen: Dispatch<SetStateAction<boolean>>) => {
       description: 'My education',
       usage: 'ed',
       fn: () => {
-        return 'Computer science stuent at University of Tunis El Manar 📚'
+        return 'Computer science student at University of Tunis El Manar 📚'
       },
     },
     exp: {
