@@ -1,65 +1,64 @@
-import { Dispatch, SetStateAction } from 'react'
+import { Dispatch, SetStateAction, useCallback } from 'react'
 import Terminal from 'react-console-emulator'
 
 interface MyTerminalProps {
   setOpen: Dispatch<SetStateAction<boolean>>
 }
 
-const commands = (setOpen: Dispatch<SetStateAction<boolean>>) => {
-  return {
-    echo: {
-      description: 'Echo a passed string.',
-      usage: 'echo <string>',
-      fn: function () {
-        return `${Array.from(arguments).join(' ')}`
-      },
-    },
-    exit: {
-      description: 'Close the terminal',
-      usage: 'exit',
-      fn: () => setOpen(false),
-    },
-    about: {
-      description: 'Description about me',
-      usage: 'about',
-      fn: () => {
-        return "I'm a computer science student and a full stack web developer. I'm currently interested in learning more about compilers and transpilers."
-      },
-    },
-    pr: {
-      description: 'A list of my recent projects',
-      usage: 'pr',
-      fn: () => {
-        return '- Brave Blog : A blog built with React that has a simple livestream feature.\n - Comm : A social media app inspired by Reddit\n- Project Management Web App : A Spring Boot application that helps teams and individuals organize their projects. \nFor more information, visit : https://github.com/Seifbarouni'
-      },
-    },
-    ed: {
-      description: 'My education',
-      usage: 'ed',
-      fn: () => {
-        return 'Computer science student at University of Tunis El Manar 📚'
-      },
-    },
-    exp: {
-      description: 'My work experience',
-      usage: 'exp',
-      fn: () => {
-        return 'Jul 2021 - Sep 2021 : Software development intern at OnePack 👨🏻‍💻'
-      },
-    },
-    contact: {
-      description: 'My email',
-      usage: 'contact',
-      fn: () => {
-        return 'seif.barouni11@gmail.com'
-      },
-    },
-  }
-}
-
 const MyTerminal: React.FC<MyTerminalProps> = ({ setOpen }) => {
+  const commands = useCallback((setOpen: Dispatch<SetStateAction<boolean>>) => {
+    return {
+      echo: {
+        description: 'Echo a passed string.',
+        usage: 'echo <string>',
+        fn: function () {
+          return `${Array.from(arguments).join(' ')}`
+        },
+      },
+      exit: {
+        description: 'Close the terminal',
+        usage: 'exit',
+        fn: () => setOpen(false),
+      },
+      about: {
+        description: 'Description about me',
+        usage: 'about',
+        fn: () => {
+          return "I'm a computer science student and a full stack web developer. I'm currently interested in learning more about compilers and transpilers."
+        },
+      },
+      pr: {
+        description: 'A list of my recent projects',
+        usage: 'pr',
+        fn: () => {
+          return '- Brave Blog : A blog built with React that has a simple livestream feature.\n - Comm : A social media app inspired by Reddit\n- Project Management Web App : A Spring Boot application that helps teams and individuals organize their projects. \nFor more information, visit : https://github.com/Seifbarouni'
+        },
+      },
+      ed: {
+        description: 'My education',
+        usage: 'ed',
+        fn: () => {
+          return 'Computer science student at University of Tunis El Manar 📚'
+        },
+      },
+      exp: {
+        description: 'My work experience',
+        usage: 'exp',
+        fn: () => {
+          return 'Jul 2021 - Sep 2021 : Software development intern at OnePack 👨🏻‍💻'
+        },
+      },
+      contact: {
+        description: 'My email',
+        usage: 'contact',
+        fn: () => {
+          return 'seif.barouni11@gmail.com'
+        },
+      },
+    }
+  }, [])
   return (
-    <div className="pb-2 bg-black rounded-lg flex flex-col relative">
+    <div className=" bg-black rounded-sm flex flex-col">
       <div className=" bg-gray-600 flex  justify-between  top-0 w-full sticky  h-8 rounded-t-sm cursor-pointer">
         <div className=" ml-4 mt-1 shadow-lg  rounded-t-sm px-6 bg-gray-500 text-white">
           <div className="mt-0.5">terminal</div>
@@ -84,26 +83,28 @@ const MyTerminal: React.FC<MyTerminalProps> = ({ setOpen }) => {
           </svg>
         </div>
       </div>
-      <Terminal
-        commands={commands(setOpen)}
-        welcomeMessage={
-          'Welcome to my terminal! Type "help" to see the options'
-        }
-        autoFocus
-        promptLabel={'terminal@user:/$'}
-        promptLabelStyle={{
-          color: '#bcf737',
-        }}
-        inputTextStyle={{
-          color: 'white',
-        }}
-        messageStyle={{
-          color: '#BCBCBC',
-        }}
-        style={{
-          backgroundColor: 'black',
-        }}
-      />
+      <div className="">
+        <Terminal
+          commands={commands(setOpen)}
+          welcomeMessage={
+            'Welcome to my terminal! Type "help" to see the options'
+          }
+          autoFocus
+          promptLabel={'terminal@user:/$'}
+          promptLabelStyle={{
+            color: '#bcf737',
+          }}
+          inputTextStyle={{
+            color: 'white',
+          }}
+          messageStyle={{
+            color: '#BCBCBC',
+          }}
+          style={{
+            backgroundColor: 'black',
+          }}
+        />
+      </div>
     </div>
   )
 }

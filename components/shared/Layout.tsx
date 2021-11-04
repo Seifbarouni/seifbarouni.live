@@ -139,7 +139,7 @@ const Layout: React.FC<LayoutProps> = ({ children, selected }) => {
             animate={{ y: 0 }}
             exit={{ y: 30 }}
             ref={ref}
-            className="w-full max-w-2xl z-50 max-h-80 overflow-y-scroll scrollbar-none"
+            className="w-full max-w-2xl z-50  max-h-80 overflow-y-scroll scrollbar-none"
           >
             <MyTerminal setOpen={setOpen} />
           </motion.div>
