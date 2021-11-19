@@ -24,7 +24,7 @@ const MyTerminal: React.FC<MyTerminalProps> = ({ setOpen }) => {
         description: 'Description about me',
         usage: 'about',
         fn: () => {
-          return "I'm a computer science student and a full stack web developer. I'm currently interested in learning more about compilers and transpilers."
+          return "I'm a computer science student and a full stack web developer.I'm open for work if you need a web app. "
         },
       },
       pr: {
