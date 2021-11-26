@@ -66,8 +66,8 @@ const FullTimeline: React.FC<FullTimelineProps> = ({}) => {
           presence on the Internet.
         </Achievement>
         <Achievement title="Started my third year of computer science">
-          Learned more about advanced algorithms, compilation and software
-          architecture.
+          Learned more about advanced algorithms and complexities, compilation,
+          software architecture and database administration.
         </Achievement>
         <Achievement title="Learned Nextjs">
           Great framework for developing production-ready react apps. Has a lot
