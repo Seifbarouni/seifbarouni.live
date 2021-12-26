@@ -5,6 +5,7 @@ import Layout from '../components/shared/Layout'
 import Education from '../components/home/Education'
 import RecentProjects from '../components/home/RecentProjects'
 import WorkExperience from '../components/home/WorkExperience'
+import TechStack from '../components/home/TechStack'
 
 export default function Home() {
   return (
@@ -45,6 +46,10 @@ export default function Home() {
         <div className="md:w-11/12 w-full pt-4">
           <RecentProjects />
         </div>
+        <h1 className="text-3xl md:text-4xl dark:text-white text-black font-bold">
+          Tech Stack I use
+        </h1>
+        <TechStack />
         <h1 className="text-3xl md:text-4xl dark:text-white text-black font-bold">
           Work experience
         </h1>
