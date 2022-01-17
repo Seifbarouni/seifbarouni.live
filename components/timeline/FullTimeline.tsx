@@ -61,9 +61,12 @@ const FullTimeline: React.FC<FullTimelineProps> = ({}) => {
     <div className="pt-8 pb-8 w-11/12">
       <Year>2021</Year>
       <ul>
-        <Achievement title="Joined Optima Junior Entreprise">
-          Optima JE is a company that helps companies make their digital
-          presence on the Internet.
+        <Achievement title="Started learning Kubernetes">
+          <p>
+            Kubernetes is a new kind of containerization platform that is
+            designed to make it easy to deploy, manage, and run applications
+            across a variety of different cloud providers.
+          </p>
         </Achievement>
         <Achievement title="Started my third year of computer science">
           Learned more about advanced algorithms and complexities, compilation,
@@ -81,6 +84,13 @@ const FullTimeline: React.FC<FullTimelineProps> = ({}) => {
       <Hr />
       <Year>2020</Year>
       <ul>
+        <Achievement title="Got introduced to Docker">
+          <p>
+            I got introduced to Docker in my first semester. I was working on a
+            project that was using Docker for the first time. I quickly learned
+            how to use Docker and how to use it to build containers.
+          </p>
+        </Achievement>
         <Achievement title="Started my second year of computer science">
           Learned C++ in the first semester, Java and Python in the second
           semester.
@@ -93,7 +103,8 @@ const FullTimeline: React.FC<FullTimelineProps> = ({}) => {
           While learning Java in class, I thought it would be a good idea to
           learn Spring Boot to build full stack applications. I have also used
           ProstgreSQL in every project I have done. On top of that, I learned
-          Express with Prisma and Typescript while making a project.
+          Express with Prisma and Typescript while making a project. I also
+          learned how to use Git and Github.
         </Achievement>
       </ul>
       <Hr />
@@ -134,8 +145,7 @@ const FullTimeline: React.FC<FullTimelineProps> = ({}) => {
       <ul>
         <Achievement title="Got introduced to programming">
           The first programming language I learned in high school is called
-          Pascal and it's an old programming language. Seeing a computer
-          executing commands that I wrote was really fascinating 🤩.
+          Pascal and it's an old programming language.
         </Achievement>
       </ul>
       <Hr />
