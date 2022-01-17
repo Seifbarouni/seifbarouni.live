@@ -59,6 +59,10 @@ const Achievement: React.FC<AchievementProps> = ({ title, children }) => {
 const FullTimeline: React.FC<FullTimelineProps> = ({}) => {
   return (
     <div className="pt-8 pb-8 w-11/12">
+      <Year>2022</Year>
+      <ul>
+        <Achievement title="Started the second semester of my studies"></Achievement>
+      </ul>
       <Year>2021</Year>
       <ul>
         <Achievement title="Started learning Kubernetes">
@@ -68,7 +72,7 @@ const FullTimeline: React.FC<FullTimelineProps> = ({}) => {
             across a variety of different cloud providers.
           </p>
         </Achievement>
-        <Achievement title="Started my third year of computer science">
+        <Achievement title="Started the first semester of my third year of computer science">
           Learned more about advanced algorithms and complexities, compilation,
           software architecture and database administration.
         </Achievement>
