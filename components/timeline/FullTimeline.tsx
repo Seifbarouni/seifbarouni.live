@@ -86,9 +86,9 @@ const FullTimeline: React.FC<FullTimelineProps> = ({}) => {
       <ul>
         <Achievement title="Got introduced to Docker">
           <p>
-            I got introduced to Docker in my first semester. I was working on a
-            project that was using Docker for the first time. I quickly learned
-            how to use Docker and how to use it to build containers.
+            Docker is a tool that allows you to run applications in a
+            containerized environment. It is a great way to run things like web
+            servers and databases.
           </p>
         </Achievement>
         <Achievement title="Started my second year of computer science">
