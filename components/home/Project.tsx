@@ -36,16 +36,14 @@ const Project: React.FC<ProjectProps> = ({
         </span>
       </div>
       <p className="dark:text-gray-400 text-gray-600 text-sm">{description}</p>
-      {learned != [] && (
-        <div>
-          <span className="dark:text-white text-black font-semibold">
-            - What I learned :{' '}
-          </span>
-          <span className="dark:text-gray-400 text-gray-600">
-            {learned?.join(', ')}
-          </span>
-        </div>
-      )}
+      <div>
+        <span className="dark:text-white text-black font-semibold">
+          - What I learned :{' '}
+        </span>
+        <span className="dark:text-gray-400 text-gray-600">
+          {learned?.join(', ')}
+        </span>
+      </div>
     </a>
   )
 }

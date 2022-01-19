@@ -10,7 +10,7 @@ const RecentProjects: React.FC<RecentProjectsProps> = () => {
         title="go-create"
         description="A tool that helps me create my apps (console apps, back-end web apps, full-stack web apps)."
         stars={0}
-        learned={[]}
+        learned={['Golang']}
       />
       <Project
         link="https://github.com/Seifbarouni/BraveBlog-frontend"
