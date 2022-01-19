@@ -6,6 +6,13 @@ const RecentProjects: React.FC<RecentProjectsProps> = () => {
   return (
     <div className="flex flex-col space-y-3 mb-16" id="projects">
       <Project
+        link="https://github.com/Seifbarouni/go-create"
+        title="go-create"
+        description="A tool that helps me create my apps (console apps, back-end web apps, full-stack web apps)."
+        stars={0}
+        learned={[]}
+      />
+      <Project
         link="https://github.com/Seifbarouni/BraveBlog-frontend"
         title="Brave Blog"
         description="A blog built with React that has a simple livestream feature."
