@@ -2,14 +2,14 @@ interface ProjectProps {
   link: string
   title: string
   description: string
-  learned: string[]
+  used: string[]
 }
 
 const Project: React.FC<ProjectProps> = ({
   link,
   title,
   description,
-  learned,
+  used,
 }) => {
   return (
     <a
@@ -23,10 +23,10 @@ const Project: React.FC<ProjectProps> = ({
       <p className="dark:text-gray-400 text-gray-600 text-sm">{description}</p>
       <div>
         <span className="dark:text-white text-black font-semibold">
-          - What I learned :{' '}
+          - What I used :{' '}
         </span>
         <span className="dark:text-gray-400 text-gray-600">
-          {learned?.join(', ')}
+          {used?.join(', ')}
         </span>
       </div>
     </a>
