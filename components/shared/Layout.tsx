@@ -4,7 +4,7 @@ import { useTheme } from 'next-themes'
 import { useEffect, useState } from 'react'
 
 import Footer from './Footer'
-import MyTerminal from './MyTerminal'
+// import MyTerminal from './MyTerminal'
 import { useOutsideAlerter } from '../../utils/hooks/useOutsideAlerter'
 
 interface LayoutProps {
@@ -16,7 +16,7 @@ const Layout: React.FC<LayoutProps> = ({ children, selected }) => {
   const [isMounted, setMounted] = useState(false)
   const [isMobile, setMobile] = useState(false)
   const { resolvedTheme, setTheme } = useTheme()
-  const { ref, isOpen, setOpen } = useOutsideAlerter(false)
+  // const { ref, isOpen, setOpen } = useOutsideAlerter(false)
 
   useEffect(() => {
     setMounted(true)
@@ -55,7 +55,7 @@ const Layout: React.FC<LayoutProps> = ({ children, selected }) => {
 
         {isMounted && (
           <div className="flex space-x-2">
-            {!isMobile && (
+            {/* {!isMobile && (
               <div
                 className={` ${
                   resolvedTheme === 'dark' ? 'bg-gray-800' : 'bg-gray-300'
@@ -79,7 +79,7 @@ const Layout: React.FC<LayoutProps> = ({ children, selected }) => {
                   />
                 </svg>
               </div>
-            )}
+            )} */}
             <div
               className={` ${
                 resolvedTheme === 'dark' ? 'bg-gray-800' : 'bg-gray-300'
@@ -124,7 +124,7 @@ const Layout: React.FC<LayoutProps> = ({ children, selected }) => {
         )}
       </nav>
       <main className="flex flex-col justify-center px-8">{children}</main>
-      {isOpen && (
+      {/* {isOpen && (
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -144,7 +144,7 @@ const Layout: React.FC<LayoutProps> = ({ children, selected }) => {
             <MyTerminal setOpen={setOpen} />
           </motion.div>
         </motion.div>
-      )}
+      )} */}
       <Footer />
     </div>
   )
