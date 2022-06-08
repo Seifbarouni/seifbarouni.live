@@ -48,7 +48,7 @@ const Footer: React.FC<FooterProps> = () => {
           href="https://www.facebook.com/profile.php?id=100008525445930"
           className="hover:underline"
         >
-          facebook
+          Facebook
         </a>
       </div>
     </footer>
