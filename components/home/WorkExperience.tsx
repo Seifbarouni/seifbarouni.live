@@ -1,20 +1,34 @@
-interface WorkExperienceProps {}
+interface WorkExperienceProps {
+  jobTitle: string
+  company: string
+  startDate: string
+  endDate: string
+  location: string
+  whatIlearned: string
+}
 
-const WorkExperience: React.FC<WorkExperienceProps> = () => {
+const WorkExperience: React.FC<WorkExperienceProps> = ({
+  jobTitle,
+  company,
+  startDate,
+  endDate,
+  whatIlearned,
+  location,
+}) => {
   return (
-    <p className="flex flex-col text-gray-600 dark:text-gray-400 mb-16 pt-4">
+    <p className="flex flex-col text-gray-600 dark:text-gray-400 mb-10 pt-4">
       <span className="text-lg">
         {' '}
-        <span className="dark:text-white text-black">
-          Software development intern
-        </span>{' '}
-        at OnePack 👨🏻‍💻
+        <span className="dark:text-white text-black">{jobTitle}</span> at{' '}
+        {company}
       </span>
-      <span>Jul 2021 - Sep 2021</span>
-      <span>Tunis, Tunisia</span>
+      <span>
+        {startDate} - {endDate}
+      </span>
+      <span>{location}</span>
       <span>
         <span className="dark:text-white text-black">- What I learned : </span>{' '}
-        <span>Redux, react-redux, redux thunks, antdesign, express</span>
+        <span>{whatIlearned}</span>
       </span>
     </p>
   )

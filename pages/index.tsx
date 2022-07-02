@@ -25,7 +25,7 @@ export default function Home() {
           </div>
           <div className="flex flex-col xl:w-2/3 xl:ml-6 xl:mt-4">
             <h1 className="text-3xl md:text-5xl dark:text-white text-black font-bold pt-6">
-              Hi, I'm Seif Barouni
+              Hi 👋, I'm Seif Barouni
             </h1>
             <h2 className="text-gray-600 dark:text-gray-400 pt-4 ml-0.5 md:w-11/12 mb-16">
               I'm a computer science student and a full stack web developer. I'm
@@ -53,7 +53,22 @@ export default function Home() {
         <h1 className="text-3xl md:text-4xl dark:text-white text-black font-bold">
           Work experience
         </h1>
-        <WorkExperience />
+        <WorkExperience
+          jobTitle="Software engineer - Part time"
+          company="Creometry ☁️"
+          startDate="Jun 2022"
+          endDate="Present"
+          whatIlearned={'Cloud technologies, kubernetes, rancher, vue, nuxt'}
+          location="Tunis, Tunisia"
+        />
+        <WorkExperience
+          jobTitle="Software development intern"
+          company="OnePack 👨🏻‍💻"
+          startDate="Jul 2021"
+          endDate="Sep 2021"
+          whatIlearned={'Redux, react-redux, redux thunks, antdesign, express'}
+          location="Tunis, Tunisia"
+        />
         <h1 className="text-3xl md:text-4xl dark:text-white text-black font-bold">
           Education
         </h1>

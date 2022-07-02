@@ -61,6 +61,18 @@ const FullTimeline: React.FC<FullTimelineProps> = ({}) => {
     <div className="pt-8 pb-8 w-11/12">
       <Year>2022</Year>
       <ul>
+        <Achievement title="Got my first part time job as a software engineer">
+          <p>
+            Learning more about Kubernetes and how to use it to deploy
+            applications.
+          </p>
+        </Achievement>
+        <Achievement title="Learned more about Devops and agile methodologies">
+          <p>
+            Agile is an approach to software development that seeks the
+            continuous delivery of working software created in rapid iterations.
+          </p>
+        </Achievement>
         <Achievement title="Started the second semester of my studies"></Achievement>
       </ul>
       <Year>2021</Year>

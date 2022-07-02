@@ -34,9 +34,10 @@ const Layout: React.FC<LayoutProps> = ({ children, selected }) => {
           <Link href="/">
             <div
               className={`${
-                selected === 'home' &&
-                'border-b dark:border-white border-black pb-1'
-              } cursor-pointer  rounded-t-lg px-2`}
+                selected === 'home'
+                  ? 'dark:text-neutral-200'
+                  : 'dark:text-neutral-500 text-neutral-500'
+              } cursor-pointer hover:ease-in duration-150 dark:hover:bg-zinc-700 hover:bg-neutral-200 rounded-lg py-1 px-3 font-semibold dark:hover:text-neutral-200`}
             >
               Home
             </div>
@@ -44,9 +45,10 @@ const Layout: React.FC<LayoutProps> = ({ children, selected }) => {
           <Link href="/timeline">
             <div
               className={`${
-                selected === 'timeline' &&
-                'border-b  dark:border-white border-black pb-1'
-              } cursor-pointer px-2`}
+                selected === 'timeline'
+                  ? 'dark:text-neutral-200'
+                  : 'dark:text-neutral-500 text-neutral-500'
+              } cursor-pointer hover:ease-in duration-150 dark:hover:bg-zinc-700 hover:bg-neutral-200 rounded-lg py-1 px-3 font-semibold dark:hover:text-neutral-200`}
             >
               Timeline
             </div>
