@@ -25,12 +25,11 @@ export default function Home() {
           </div>
           <div className="flex flex-col xl:w-2/3 xl:ml-6 xl:mt-4">
             <h1 className="text-3xl md:text-5xl dark:text-white text-black font-bold pt-6">
-              Hi 👋, I'm Seif Barouni
+              Hi, I'm Seif Barouni
             </h1>
             <h2 className="text-gray-600 dark:text-gray-400 pt-4 ml-0.5 md:w-11/12 mb-16">
-              I'm a computer science student and a full stack web developer. I'm
-              open for work if you need a web app. You can find my contact
-              details{' '}
+              I'm a Software Developer from Tunisia. I'm open for work if you
+              need a web app. You can find my contact details{' '}
               <a
                 href="#footer"
                 className="text-blue-500 underline hover:cursor-pointer"
