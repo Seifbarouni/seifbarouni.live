@@ -15,6 +15,10 @@ const Layout: React.FC<LayoutProps> = ({ children, selected }) => {
   const [isMounted, setMounted] = useState(false)
   const [isMobile, setMobile] = useState(false)
   const { resolvedTheme, setTheme } = useTheme()
+  const getCurrentURL = () => {
+    const url = new URL(window.location.href)
+    return url.pathname
+  }
   useEffect(() => {
     setMounted(true)
     if (
@@ -36,7 +40,7 @@ const Layout: React.FC<LayoutProps> = ({ children, selected }) => {
           content="Seif Barouni's personal website"
           key="ogdesc"
         />
-        <meta property="og:url" content={window.location.href} key="ogurl" />
+        <meta property="og:url" content={getCurrentURL()} key="ogurl" />
         <meta property="og:image" content={logo} key="ogimage" />
       </Head>
       <nav className="p-8 flex  xl:px-72 md:px-14 justify-between items-center w-full sticky top-2 dark:bg-eerie-black bg-gray-100 z-50">
