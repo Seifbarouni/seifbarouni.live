@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import Head from 'next/head'
 import { useTheme } from 'next-themes'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 import Footer from './Footer'
 import logo from '../../public/favicon.svg'
@@ -14,6 +14,9 @@ interface LayoutProps {
 const Layout: React.FC<LayoutProps> = ({ children, selected }) => {
   const [isMounted, setMounted] = useState(false)
   const { resolvedTheme, setTheme } = useTheme()
+  useEffect(() => {
+    setMounted(true)
+  }, [])
   return (
     <div className=" flex flex-col relative">
       <Head>
