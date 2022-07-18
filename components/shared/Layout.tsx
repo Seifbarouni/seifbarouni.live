@@ -1,11 +1,10 @@
 import Link from 'next/link'
-import { motion } from 'framer-motion'
+import Head from 'next/head'
 import { useTheme } from 'next-themes'
 import { useEffect, useState } from 'react'
 
 import Footer from './Footer'
-// import MyTerminal from './MyTerminal'
-import { useOutsideAlerter } from '../../utils/hooks/useOutsideAlerter'
+import logo from '../../public/favicon.svg'
 
 interface LayoutProps {
   children: React.ReactNode
@@ -16,8 +15,6 @@ const Layout: React.FC<LayoutProps> = ({ children, selected }) => {
   const [isMounted, setMounted] = useState(false)
   const [isMobile, setMobile] = useState(false)
   const { resolvedTheme, setTheme } = useTheme()
-  // const { ref, isOpen, setOpen } = useOutsideAlerter(false)
-
   useEffect(() => {
     setMounted(true)
     if (
@@ -29,6 +26,19 @@ const Layout: React.FC<LayoutProps> = ({ children, selected }) => {
   }, [])
   return (
     <div className=" flex flex-col relative">
+      <Head>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta name="description" content="Seif Barouni's personal website" />
+        <meta property="og:title" content="Seif Barouni" key="ogtitle" />
+        <meta
+          property="og:description"
+          content="Seif Barouni's personal website"
+          key="ogdesc"
+        />
+        <meta property="og:url" content={window.location.href} key="ogurl" />
+        <meta property="og:image" content={logo} key="ogimage" />
+      </Head>
       <nav className="p-8 flex  xl:px-72 md:px-14 justify-between items-center w-full sticky top-2 dark:bg-eerie-black bg-gray-100 z-50">
         <div className="dark:text-white text-black flex space-x-2">
           <Link href="/">
@@ -57,31 +67,6 @@ const Layout: React.FC<LayoutProps> = ({ children, selected }) => {
 
         {isMounted && (
           <div className="flex space-x-2">
-            {/* {!isMobile && (
-              <div
-                className={` ${
-                  resolvedTheme === 'dark' ? 'bg-gray-800' : 'bg-gray-300'
-                } p-2 rounded-lg cursor-pointer active:transform  active:scale-110 transition duration-150  ease-out hidden sm:inline-flex`}
-                onClick={() => setOpen(true)}
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className={`h-6 w-6  ${
-                    resolvedTheme === 'dark' ? 'text-white' : 'text-gray-800'
-                  } `}
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
-                  />
-                </svg>
-              </div>
-            )} */}
             <div
               className={` ${
                 resolvedTheme === 'dark' ? 'bg-gray-800' : 'bg-gray-300'
@@ -126,27 +111,6 @@ const Layout: React.FC<LayoutProps> = ({ children, selected }) => {
         )}
       </nav>
       <main className="flex flex-col justify-center px-8">{children}</main>
-      {/* {isOpen && (
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.1 }}
-          className="min-h-screen  fixed  left-0 top-0  flex justify-center items-center inset-0 z-50 "
-        >
-          <div className="absolute dark:bg-gray-800 bg-black opacity-60 inset-0 z-0"></div>
-          <motion.div
-            drag
-            initial={{ y: 50 }}
-            animate={{ y: 0 }}
-            exit={{ y: 30 }}
-            ref={ref}
-            className="w-full max-w-2xl z-50  max-h-80 overflow-y-scroll scrollbar-none"
-          >
-            <MyTerminal setOpen={setOpen} />
-          </motion.div>
-        </motion.div>
-      )} */}
       <Footer />
     </div>
   )
