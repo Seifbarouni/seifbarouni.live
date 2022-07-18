@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import Head from 'next/head'
 import { useTheme } from 'next-themes'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 
 import Footer from './Footer'
 import logo from '../../public/favicon.svg'
@@ -13,21 +13,7 @@ interface LayoutProps {
 
 const Layout: React.FC<LayoutProps> = ({ children, selected }) => {
   const [isMounted, setMounted] = useState(false)
-  const [isMobile, setMobile] = useState(false)
   const { resolvedTheme, setTheme } = useTheme()
-  const getCurrentURL = () => {
-    const url = new URL(window.location.href)
-    return url.pathname
-  }
-  useEffect(() => {
-    setMounted(true)
-    if (
-      /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-        navigator.userAgent
-      )
-    )
-      setMobile(true)
-  }, [])
   return (
     <div className=" flex flex-col relative">
       <Head>
@@ -40,7 +26,6 @@ const Layout: React.FC<LayoutProps> = ({ children, selected }) => {
           content="Seif Barouni's personal website"
           key="ogdesc"
         />
-        <meta property="og:url" content={getCurrentURL()} key="ogurl" />
         <meta property="og:image" content={logo} key="ogimage" />
       </Head>
       <nav className="p-8 flex  xl:px-72 md:px-14 justify-between items-center w-full sticky top-2 dark:bg-eerie-black bg-gray-100 z-50">
