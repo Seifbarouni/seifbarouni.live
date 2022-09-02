@@ -55,8 +55,8 @@ export default function Home() {
         <WorkExperience
           jobTitle="Software engineer - Part time"
           company="Creometry ☁️"
-          startDate="Jun 2022"
-          endDate="Present"
+          startDate="May 2022"
+          endDate="August 2022"
           whatIlearned={'Cloud technologies, kubernetes, rancher, vue, nuxt'}
           location="Tunis, Tunisia"
         />
