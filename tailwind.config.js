@@ -1,8 +1,11 @@
-const defaultTheme = require('tailwindcss/defaultTheme');
+const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
   mode: 'jit',
-  purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
+  content: [
+    './pages/**/*.{js,ts,jsx,tsx}',
+    './components/**/*.{js,ts,jsx,tsx}',
+  ],
   darkMode: 'class',
   theme: {
     extend: {
@@ -10,14 +13,12 @@ module.exports = {
         'eerie-black': '#110c11',
       },
       fontFamily: {
-        sans: ['Inter', ...defaultTheme.fontFamily.sans]
-      }
+        sans: ['Inter', ...defaultTheme.fontFamily.sans],
+      },
     },
   },
   variants: {
     extend: {},
   },
-  plugins: [
-    require("tailwindcss-no-scrollbar"),
-  ],
+  plugins: [require('tailwindcss-no-scrollbar')],
 }

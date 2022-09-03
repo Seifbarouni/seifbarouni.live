@@ -58,7 +58,7 @@ const Achievement: React.FC<AchievementProps> = ({ title, children }) => {
 
 const FullTimeline: React.FC<FullTimelineProps> = ({}) => {
   return (
-    <div className="pt-8 pb-8 w-11/12">
+    <div className="pt-8 pb-8 sm:w-5/6 2xl:px-24">
       <Year>2022</Year>
       <ul>
         <Achievement title="Got my first part time job as a software engineer">

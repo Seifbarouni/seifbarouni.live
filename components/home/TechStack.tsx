@@ -13,7 +13,7 @@ interface TechStackProps {}
 const TechStack: React.FC<TechStackProps> = ({}) => {
   const { resolvedTheme, setTheme } = useTheme()
   return (
-    <div className="mb-16 pt-4 grid  lg:grid-cols-5 md:grid-cols-3 sm:grid-cols-2 sm:gap-2 gap-4 sm:ml-0 ml-12">
+    <div className="mb-16 pt-4 grid  lg:grid-cols-5 md:grid-cols-3 sm:grid-cols-2 sm:gap-2 gap-4 sm:ml-0 ml-16 w-5/6">
       {resolvedTheme === 'light' ? (
         <a
           href="https://www.nextjs.org"

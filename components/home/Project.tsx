@@ -3,6 +3,8 @@ interface ProjectProps {
   title: string
   description: string
   used: string[]
+  from: string
+  to: string
 }
 
 const Project: React.FC<ProjectProps> = ({
@@ -10,24 +12,30 @@ const Project: React.FC<ProjectProps> = ({
   title,
   description,
   used,
+  from,
+  to,
 }) => {
   return (
     <a
       href={link}
       target="_blank"
-      className="border-2 dark:border-gray-700 border-gray-300  rounded-md p-3  cursor-pointer flex flex-col space-y-2 shadow-sm"
+      className={`rounded-xl p-1.5 shadow-sm md:w-5/6 bg-gradient-to-r ${from} ${to}`}
     >
-      <h1 className="dark:text-white text-black text-lg font-semibold">
-        {title}
-      </h1>
-      <p className="dark:text-gray-400 text-gray-600 text-sm">{description}</p>
-      <div>
-        <span className="dark:text-white text-black font-semibold">
-          - What I used :{' '}
-        </span>
-        <span className="dark:text-gray-400 text-gray-600">
-          {used?.join(', ')}
-        </span>
+      <div className="cursor-pointer flex flex-col space-y-2 dark:bg-eerie-black bg-gray-100 p-3 rounded-lg">
+        <h1 className="dark:text-white text-black text-lg md:text-xl font-semibold">
+          {title}
+        </h1>
+        <p className="dark:text-gray-400 text-gray-600 text-sm md:text-base">
+          {description}
+        </p>
+        <div>
+          <span className="dark:text-white text-black font-semibold">
+            - What I used :{' '}
+          </span>
+          <span className="dark:text-gray-400 text-gray-600">
+            {used?.join(', ')}
+          </span>
+        </div>
       </div>
     </a>
   )

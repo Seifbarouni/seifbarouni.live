@@ -14,20 +14,20 @@ export default function Home() {
         <title>Seif Barouni - Developer</title>
       </Head>
       <div className="flex flex-col  xl:px-72 md:px-16 justify-center">
-        <div className="flex xl:flex-row flex-col xl:items-center">
-          <div className="relative h-44 w-44 shadow-xl ring-2 rounded-lg dark:ring-gray-200 ring-gray-400 xl:mt-0 mt-2">
+        <div className="flex xl:flex-row flex-col xl:items-center justify-center">
+          <div className="relative h-44 w-44 rounded-full  xl:mt-0 mt-2">
             <Image
-              className="rounded-lg shadow-xl"
+              className="rounded-full"
               src="/images/me.jpeg"
               layout="fill"
               objectFit="cover"
             />
           </div>
           <div className="flex flex-col xl:w-2/3 xl:ml-6 xl:mt-4">
-            <h1 className="text-3xl md:text-5xl dark:text-white text-black font-bold pt-6">
+            <h1 className="text-3xl 2xl:text-5xl dark:text-white text-black font-bold pt-6">
               Hi, I'm Seif Barouni
             </h1>
-            <h2 className="text-gray-600 dark:text-gray-400 pt-4 ml-0.5 md:w-11/12 mb-16">
+            <h2 className="text-gray-600 dark:text-gray-400 pt-4 ml-0.5 md:w-2/3 mb-16">
               I'm a Software Developer, cloud enthusiast and problem solver from
               Tunisia. I'm currently learning Azure and planning to share my
               journey in blog posts. You can find my contact details{' '}
@@ -40,39 +40,43 @@ export default function Home() {
             </h2>
           </div>
         </div>
-        <h1 className="text-3xl md:text-4xl dark:text-white text-black font-bold">
-          My recent projects
-        </h1>
-        <div className="md:w-11/12 w-full pt-4">
-          <RecentProjects />
+        <div className="2xl:px-24">
+          <h1 className="text-3xl 2xl:text-4xl dark:text-white text-black font-bold">
+            My recent projects
+          </h1>
+          <div className="md:w-11/12 w-full pt-4">
+            <RecentProjects />
+          </div>
+          <h1 className="text-3xl 2xl:text-4xl dark:text-white text-black font-bold">
+            Tech Stack I use
+          </h1>
+          <TechStack />
+          <h1 className="text-3xl 2xl:text-4xl dark:text-white text-black font-bold">
+            Work experience
+          </h1>
+          <WorkExperience
+            jobTitle="Software engineer - Part time"
+            company="Creometry"
+            startDate="May 2022"
+            endDate="August 2022"
+            whatIlearned={'Cloud technologies, kubernetes, rancher, vue, nuxt'}
+            location="Tunis, Tunisia"
+          />
+          <WorkExperience
+            jobTitle="Software development intern"
+            company="OnePack"
+            startDate="Jul 2021"
+            endDate="Sep 2021"
+            whatIlearned={
+              'Redux, react-redux, redux thunks, antdesign, express'
+            }
+            location="Tunis, Tunisia"
+          />
+          <h1 className="text-3xl 2xl:text-4xl dark:text-white text-black font-bold">
+            Education
+          </h1>
+          <Education />
         </div>
-        <h1 className="text-3xl md:text-4xl dark:text-white text-black font-bold">
-          Tech Stack I use
-        </h1>
-        <TechStack />
-        <h1 className="text-3xl md:text-4xl dark:text-white text-black font-bold">
-          Work experience
-        </h1>
-        <WorkExperience
-          jobTitle="Software engineer - Part time"
-          company="Creometry ☁️"
-          startDate="May 2022"
-          endDate="August 2022"
-          whatIlearned={'Cloud technologies, kubernetes, rancher, vue, nuxt'}
-          location="Tunis, Tunisia"
-        />
-        <WorkExperience
-          jobTitle="Software development intern"
-          company="OnePack 👨🏻‍💻"
-          startDate="Jul 2021"
-          endDate="Sep 2021"
-          whatIlearned={'Redux, react-redux, redux thunks, antdesign, express'}
-          location="Tunis, Tunisia"
-        />
-        <h1 className="text-3xl md:text-4xl dark:text-white text-black font-bold">
-          Education
-        </h1>
-        <Education />
       </div>
     </Layout>
   )

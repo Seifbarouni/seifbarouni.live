@@ -18,7 +18,7 @@ const Layout: React.FC<LayoutProps> = ({ children, selected }) => {
     setMounted(true)
   }, [])
   return (
-    <div className=" flex flex-col relative">
+    <div className=" flex flex-col relative justify-center items-center">
       <Head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
@@ -31,7 +31,7 @@ const Layout: React.FC<LayoutProps> = ({ children, selected }) => {
         />
         <meta property="og:image" content={logo} key="ogimage" />
       </Head>
-      <nav className="p-8 flex  xl:px-72 md:px-14 justify-between items-center w-full sticky top-2 dark:bg-eerie-black bg-gray-100 z-50">
+      <nav className="p-8 flex  xl:px-72 md:px-16 justify-between items-center w-full sticky top-0 dark:bg-eerie-black bg-gray-100 z-50">
         <div className="dark:text-white text-black flex space-x-2">
           <Link href="/">
             <div
@@ -55,6 +55,17 @@ const Layout: React.FC<LayoutProps> = ({ children, selected }) => {
               Timeline
             </div>
           </Link>
+          <a href="#">
+            <div
+              className={`${
+                selected === 'blog'
+                  ? 'dark:text-neutral-200'
+                  : 'dark:text-neutral-500 text-neutral-500'
+              } cursor-pointer hover:ease-in duration-150 dark:hover:bg-zinc-700 hover:bg-neutral-200 rounded-lg py-1 px-3 font-semibold dark:hover:text-neutral-200`}
+            >
+              Blog
+            </div>
+          </a>
         </div>
 
         {isMounted && (
@@ -102,8 +113,12 @@ const Layout: React.FC<LayoutProps> = ({ children, selected }) => {
           </div>
         )}
       </nav>
-      <main className="flex flex-col justify-center px-8">{children}</main>
-      <Footer />
+      <div className="flex justify-center items-center">
+        <main className=" px-8">{children}</main>
+      </div>
+      <div className="flex justify-center w-full">
+        <Footer />
+      </div>
     </div>
   )
 }

@@ -3,11 +3,10 @@ interface FooterProps {}
 const Footer: React.FC<FooterProps> = () => {
   return (
     <footer
-      className=" flex flex-col justify-center items-center lg:px-72 md:px-14 w-full mb-8 dark:text-gray-400 text-gray-600"
+      className=" flex flex-col justify-center items-center lg:px-72 md:px-14 w-5/6 mb-8 dark:text-gray-400 text-gray-600 mt-24"
       id="footer"
     >
-      <hr className="w-full border-1 border-gray-300 dark:border-gray-800 mb-8" />
-      <div className="flex items-center justify-center">
+      <div className="flex items-center justify-center text-center">
         <span>
           This website is built with{' '}
           <a
@@ -27,7 +26,7 @@ const Footer: React.FC<FooterProps> = () => {
           </a>{' '}
         </span>
       </div>
-      <div className="flex pt-4 space-x-16">
+      <div className="flex pt-4 space-x-8">
         <a
           target="_blank"
           href="https://github.com/Seifbarouni"
