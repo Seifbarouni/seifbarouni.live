@@ -12,28 +12,22 @@ const RecentProjects: React.FC<RecentProjectsProps> = () => {
         used={['Golang']}
       />
       <Project
+        link="https://github.com/Seifbarouni/go-config-server"
+        title="go-config-server"
+        description="App that provides an HTTP resource-based API for external configuration (YAML content)."
+        used={['Golang', 'Microservices']}
+      />
+      <Project
         link="https://github.com/Seifbarouni/BraveBlog-frontend"
         title="Brave Blog"
         description="A blog built with React that has a simple livestream feature."
         used={['React', 'Typescript', 'PostgreSQL', 'Tailwind']}
       />
       <Project
-        link="https://github.com/Seifbarouni/Project-Management-Web-App"
-        title="Project Management Web App"
-        description="A Spring Boot application that helps teams and individuals organize their projects. "
-        used={['Java', 'Spring Boot', 'VanillaJS', 'PostreSQL', 'Thymeleaf']}
-      />
-      <Project
         link="https://github.com/Seifbarouni/Comm"
         title="Comm"
         description="A social media app inspired by Reddit."
         used={['Svelte', 'PostgreSQL', 'Tailwind']}
-      />
-      <Project
-        link="https://github.com/Seifbarouni/svelte-covid19-tracker"
-        title="Covid-19 Tracker"
-        description="An app that displays news about covid-19 from covid19api.com."
-        used={['Svelte', 'Tailwind']}
       />
     </div>
   )
