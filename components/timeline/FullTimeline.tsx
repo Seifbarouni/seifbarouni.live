@@ -75,6 +75,7 @@ const FullTimeline: React.FC<FullTimelineProps> = ({}) => {
         </Achievement>
         <Achievement title="Started the second semester of my studies"></Achievement>
       </ul>
+      <Hr />
       <Year>2021</Year>
       <ul>
         <Achievement title="Started learning Kubernetes">
