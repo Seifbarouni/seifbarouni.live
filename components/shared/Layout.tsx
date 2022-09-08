@@ -14,6 +14,15 @@ interface LayoutProps {
 const Layout: React.FC<LayoutProps> = ({ children, selected }) => {
   const [isMounted, setMounted] = useState(false)
   const { resolvedTheme, setTheme } = useTheme()
+  const downloadFunc = () => {
+    const anchor = document.createElement('a')
+    anchor.setAttribute('href', '/cv.pdf')
+    anchor.setAttribute('download', '')
+    document.body.appendChild(anchor)
+    anchor.click()
+    console.log(anchor)
+    anchor.parentNode?.removeChild(anchor)
+  }
   useEffect(() => {
     setMounted(true)
   }, [])
@@ -55,7 +64,7 @@ const Layout: React.FC<LayoutProps> = ({ children, selected }) => {
               Timeline
             </div>
           </Link>
-          <a href="#">
+          <a href="#" className="sm:flex hidden">
             <div
               className={`${
                 selected === 'blog'
@@ -66,6 +75,17 @@ const Layout: React.FC<LayoutProps> = ({ children, selected }) => {
               Blog
             </div>
           </a>
+          <div onClick={() => downloadFunc()}>
+            <div
+              className={`${
+                selected === 'blog'
+                  ? 'dark:text-neutral-200'
+                  : 'dark:text-neutral-500 text-neutral-500'
+              } cursor-pointer hover:ease-in duration-150 dark:hover:bg-zinc-700 hover:bg-neutral-200 rounded-lg py-1 px-3 font-semibold dark:hover:text-neutral-200`}
+            >
+              CV
+            </div>
+          </div>
         </div>
 
         {isMounted && (
