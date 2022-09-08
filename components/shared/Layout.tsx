@@ -14,15 +14,6 @@ interface LayoutProps {
 const Layout: React.FC<LayoutProps> = ({ children, selected }) => {
   const [isMounted, setMounted] = useState(false)
   const { resolvedTheme, setTheme } = useTheme()
-  const downloadFunc = () => {
-    const anchor = document.createElement('a')
-    anchor.setAttribute('href', '/cv.pdf')
-    anchor.setAttribute('download', '')
-    document.body.appendChild(anchor)
-    anchor.click()
-    console.log(anchor)
-    anchor.parentNode?.removeChild(anchor)
-  }
   useEffect(() => {
     setMounted(true)
   }, [])
@@ -75,7 +66,7 @@ const Layout: React.FC<LayoutProps> = ({ children, selected }) => {
               Blog
             </div>
           </a>
-          <div onClick={() => downloadFunc()}>
+          <a href="/cv.pdf" download>
             <div
               className={`${
                 selected === 'blog'
@@ -85,7 +76,7 @@ const Layout: React.FC<LayoutProps> = ({ children, selected }) => {
             >
               CV
             </div>
-          </div>
+          </a>
         </div>
 
         {isMounted && (
