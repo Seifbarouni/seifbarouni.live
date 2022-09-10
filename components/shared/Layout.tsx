@@ -72,7 +72,7 @@ const Layout: React.FC<LayoutProps> = ({ children, selected }) => {
           <div className="flex space-x-2">
             <div
               className={` ${
-                resolvedTheme === 'dark' ? 'bg-gray-800' : 'bg-gray-300'
+                resolvedTheme === 'dark' ? 'bg-zinc-800' : 'bg-gray-300'
               } p-2 rounded-lg cursor-pointer active:transform  active:scale-110 transition duration-150  ease-out`}
               onClick={() =>
                 setTheme(`${resolvedTheme === 'dark' ? 'light' : 'dark'}`)
@@ -96,7 +96,7 @@ const Layout: React.FC<LayoutProps> = ({ children, selected }) => {
               ) : (
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6 fill-current text-gray-800"
+                  className="h-6 w-6 fill-current text-zinc-800"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
