@@ -28,7 +28,6 @@ class MyDocument extends Document {
         <body className="dark:bg-eerie-black bg-gray-100 overflow-y-auto">
           <Main />
           <NextScript />
-          <div className="h-2 bg-gradient-to-r from-blue-500 via-red-500 to-pink-500 sticky top-0 z-40" />
         </body>
       </Html>
     )

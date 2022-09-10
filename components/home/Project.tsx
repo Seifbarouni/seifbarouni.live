@@ -3,8 +3,6 @@ interface ProjectProps {
   title: string
   description: string
   used: string[]
-  from: string
-  to: string
 }
 
 const Project: React.FC<ProjectProps> = ({
@@ -12,14 +10,12 @@ const Project: React.FC<ProjectProps> = ({
   title,
   description,
   used,
-  from,
-  to,
 }) => {
   return (
     <a
       href={link}
       target="_blank"
-      className={`rounded-xl p-1.5 shadow-sm md:w-5/6 bg-gradient-to-r ${from} ${to}`}
+      className={`rounded-xl p-1.5 shadow-sm md:w-5/6 dark:bg-zinc-800 bg-gray-300`}
     >
       <div className="cursor-pointer flex flex-col space-y-2 dark:bg-eerie-black bg-gray-100 p-3 rounded-lg">
         <h1 className="dark:text-white text-black text-lg md:text-xl font-semibold">
