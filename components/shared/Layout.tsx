@@ -55,17 +55,6 @@ const Layout: React.FC<LayoutProps> = ({ children, selected }) => {
               Timeline
             </div>
           </Link>
-          <a href="#" className="sm:flex hidden">
-            <div
-              className={`${
-                selected === 'blog'
-                  ? 'dark:text-neutral-200'
-                  : 'dark:text-neutral-500 text-neutral-500'
-              } cursor-pointer hover:ease-in duration-150 dark:hover:bg-zinc-700 hover:bg-neutral-200 rounded-lg py-1 px-3 font-semibold dark:hover:text-neutral-200`}
-            >
-              Blog
-            </div>
-          </a>
           <a href="/cv.pdf" download>
             <div
               className={`${

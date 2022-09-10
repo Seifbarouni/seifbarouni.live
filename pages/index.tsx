@@ -29,8 +29,8 @@ export default function Home() {
             </h1>
             <h2 className="text-gray-600 dark:text-gray-400 pt-4 ml-0.5 md:w-2/3 mb-16">
               I'm a Software Developer, cloud enthusiast and problem solver from
-              Tunisia. I'm currently learning Azure and planning to share my
-              journey in blog posts. You can find my contact details{' '}
+              Tunisia. I'm currently learning Azure. You can find my contact
+              details{' '}
               <a
                 href="#footer"
                 className="text-blue-500 underline hover:cursor-pointer"
