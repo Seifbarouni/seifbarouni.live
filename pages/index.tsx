@@ -21,6 +21,7 @@ export default function Home() {
               src="/images/me.jpeg"
               layout="fill"
               objectFit="cover"
+              alt="me"
             />
           </div>
           <div className="flex flex-col xl:w-2/3 xl:ml-6 xl:mt-4">

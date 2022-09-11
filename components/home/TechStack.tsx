@@ -19,45 +19,51 @@ const TechStack: React.FC<TechStackProps> = ({}) => {
           href="https://www.nextjs.org"
           target="_blank"
           className=" rounded-md p-3 w-28 h-28 flex items-center transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-105 duration-200"
+          aria-label="Read more about nextjs"
         >
-          <Image src={nextjsLogo} />
+          <Image src={nextjsLogo} alt="nextjsLogo" />
         </a>
       ) : (
         <a
           href="https://www.nextjs.org"
           target="_blank"
           className=" rounded-md p-3 w-28 h-28 flex items-center transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-105 duration-200"
+          aria-label="Read more about nextjs"
         >
-          <Image src={nextjsLogoLight} />
+          <Image src={nextjsLogoLight} alt="nextjsLogoLight" />
         </a>
       )}
       <a
         href="https://reactjs.org/"
         target="_blank"
         className="  rounded-md p-3 w-28 h-28 flex items-center transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-105 duration-200"
+        aria-label="Read more about react"
       >
-        <Image src={reactLogo} />
+        <Image src={reactLogo} alt="reactLogo" />
       </a>
       <a
         href="https://tailwindcss.com/"
         target="_blank"
         className="  rounded-md p-3 w-28 h-28 flex items-center transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-105 duration-200"
+        aria-label="Read more about tailwindcss"
       >
-        <Image src={tailwindLogo} />
+        <Image src={tailwindLogo} alt="tailwindLogo" />
       </a>
       <a
         href="https://go.dev/"
         target="_blank"
         className="  rounded-md p-3 w-28 h-28 flex items-center transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-105 duration-200"
+        aria-label="Read more about golang"
       >
-        <Image src={goLogo} />
+        <Image src={goLogo} alt="goLogo" />
       </a>
       <a
         href="https://www.postgresql.org/"
         target="_blank"
         className=" rounded-md p-3 w-28 h-28 flex items-center transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-105 duration-200"
+        aria-label="Read more about postgres"
       >
-        <Image src={pgLogo} />
+        <Image src={pgLogo} alt="pgLogo" />
       </a>
     </div>
   )
