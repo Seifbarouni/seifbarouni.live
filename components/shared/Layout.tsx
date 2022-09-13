@@ -69,7 +69,7 @@ const Layout: React.FC<LayoutProps> = ({ children, selected }) => {
         </div>
 
         {isMounted && (
-          <div className="flex space-x-2">
+          <div className="flex lg:pr-16">
             <div
               className={` ${
                 resolvedTheme === 'dark' ? 'bg-zinc-800' : 'bg-gray-300'
