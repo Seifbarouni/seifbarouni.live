@@ -26,12 +26,12 @@ export default function Home() {
           </div>
           <div className="flex flex-col xl:w-2/3 xl:ml-6 xl:mt-4">
             <h1 className="text-3xl 2xl:text-5xl dark:text-white text-black font-bold pt-6">
-              Hi, I'm Seif Barouni
+              Seif Barouni
             </h1>
             <h2 className="text-gray-600 dark:text-gray-400 pt-4 ml-0.5 md:w-2/3 mb-16">
               I'm a Software Developer, cloud enthusiast and problem solver from
-              Tunisia. I'm currently learning Azure. You can find my contact
-              details{' '}
+              Tunisia. I'm currently learning Azure and Terraform. You can find
+              my contact details{' '}
               <a
                 href="#footer"
                 className="text-blue-500 underline hover:cursor-pointer"

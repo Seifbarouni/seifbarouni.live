@@ -31,7 +31,7 @@ const Layout: React.FC<LayoutProps> = ({ children, selected }) => {
         />
         <meta property="og:image" content={logo} key="ogimage" />
       </Head>
-      <nav className="p-8 flex  xl:px-72 md:px-16 justify-between items-center w-full sticky top-0 dark:bg-eerie-black bg-gray-100 z-50">
+      <nav className="p-8 flex  xl:px-96 md:px-16 xs:px-8 justify-between items-center w-full sticky top-0 dark:bg-eerie-black bg-gray-100 z-50">
         <div className="dark:text-white text-black flex space-x-2">
           <Link href="/">
             <div
@@ -114,7 +114,7 @@ const Layout: React.FC<LayoutProps> = ({ children, selected }) => {
         )}
       </nav>
       <div className="flex justify-center items-center">
-        <main className=" px-8">{children}</main>
+        <main className="xl:pl-36 xl:px-0 px-8">{children}</main>
       </div>
       <div className="flex justify-center w-full">
         <Footer />
