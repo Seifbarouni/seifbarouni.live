@@ -13,6 +13,7 @@ const Project: React.FC<ProjectProps> = ({
 }) => {
   return (
     <a
+      rel="noopener noreferrer"
       href={link}
       target="_blank"
       className={`rounded-xl p-1.5 shadow-sm md:w-5/6 dark:bg-zinc-800 bg-gray-300`}

@@ -10,6 +10,7 @@ const Footer: React.FC<FooterProps> = () => {
         <span>
           This website is built with{' '}
           <a
+            rel="noopener noreferrer"
             target="_blank"
             href=" https://nextjs.org/"
             className="underline text-blue-500"
@@ -18,6 +19,7 @@ const Footer: React.FC<FooterProps> = () => {
           </a>{' '}
           and{' '}
           <a
+            rel="noopener noreferrer"
             target="_blank"
             href="https://tailwindcss.com/"
             className="underline text-blue-500"
@@ -28,6 +30,7 @@ const Footer: React.FC<FooterProps> = () => {
       </div>
       <div className="flex pt-4 space-x-8">
         <a
+          rel="noopener noreferrer"
           target="_blank"
           href="https://github.com/Seifbarouni"
           className="hover:underline"
@@ -35,6 +38,7 @@ const Footer: React.FC<FooterProps> = () => {
           Github
         </a>
         <a
+          rel="noopener noreferrer"
           target="_blank"
           href="https://linkedin.com/in/seif-barouni-5811191b8
           "
@@ -43,6 +47,7 @@ const Footer: React.FC<FooterProps> = () => {
           Linkedin
         </a>
         <a
+          rel="noopener noreferrer"
           target="_blank"
           href="https://www.facebook.com/profile.php?id=100008525445930"
           className="hover:underline"

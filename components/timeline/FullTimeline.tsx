@@ -135,6 +135,7 @@ const FullTimeline: React.FC<FullTimelineProps> = ({}) => {
           When I started to get into web development, I wanted to start with the
           back end. So I chose the{' '}
           <a
+            rel="noopener noreferrer"
             target="_blank"
             href="https://golang.org/"
             className="text-blue-500 underline"
@@ -148,6 +149,7 @@ const FullTimeline: React.FC<FullTimelineProps> = ({}) => {
           I tried to make a simple website for the first time and it was a great
           experience but the CSS part was hard. I also learned about how{' '}
           <a
+            rel="noopener noreferrer"
             target="_blank"
             href="https://developer.mozilla.org/en-US/docs/Web/HTTP"
             className="text-blue-500 underline"
