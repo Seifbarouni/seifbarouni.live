@@ -31,7 +31,7 @@ const Layout: React.FC<LayoutProps> = ({ children, selected }) => {
         />
         <meta property="og:image" content={logo} key="ogimage" />
       </Head>
-      <nav className="p-8 flex  xl:px-96 md:px-16 xs:px-8 justify-between items-center w-full sticky top-0 dark:bg-eerie-black bg-gray-100 z-50">
+      <nav className="p-8 flex  2xl:px-96 xl:px-64 md:px-16 xs:px-8 px-1 justify-between items-center w-full sticky top-0 dark:bg-eerie-black bg-gray-100 z-50">
         <div className="dark:text-white text-black flex space-x-2">
           <Link href="/">
             <div
@@ -55,10 +55,21 @@ const Layout: React.FC<LayoutProps> = ({ children, selected }) => {
               Timeline
             </div>
           </Link>
-          <a href="/cv.pdf" download>
+          <Link href="/blog">
             <div
               className={`${
                 selected === 'blog'
+                  ? 'dark:text-neutral-200'
+                  : 'dark:text-neutral-500 text-neutral-500'
+              } cursor-pointer hover:ease-in duration-150 dark:hover:bg-zinc-700 hover:bg-neutral-200 rounded-lg py-1 px-3 font-semibold dark:hover:text-neutral-200`}
+            >
+              Blog
+            </div>
+          </Link>
+          <a href="/cv.pdf" download>
+            <div
+              className={`${
+                selected === 'cv'
                   ? 'dark:text-neutral-200'
                   : 'dark:text-neutral-500 text-neutral-500'
               } cursor-pointer hover:ease-in duration-150 dark:hover:bg-zinc-700 hover:bg-neutral-200 rounded-lg py-1 px-3 font-semibold dark:hover:text-neutral-200`}
@@ -69,7 +80,7 @@ const Layout: React.FC<LayoutProps> = ({ children, selected }) => {
         </div>
 
         {isMounted && (
-          <div className="flex lg:pr-16">
+          <div className="flex 2xl:pr-16">
             <div
               className={` ${
                 resolvedTheme === 'dark' ? 'bg-zinc-800' : 'bg-gray-300'
@@ -113,8 +124,8 @@ const Layout: React.FC<LayoutProps> = ({ children, selected }) => {
           </div>
         )}
       </nav>
-      <div className="flex justify-center items-center">
-        <main className="xl:pl-36 xl:px-0 px-8">{children}</main>
+      <div className="w-full flex">
+        <main className="xl:pl-36 xl:px-0 px-8 w-full">{children}</main>
       </div>
       <div className="flex justify-center w-full">
         <Footer />
