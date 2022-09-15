@@ -8,7 +8,7 @@ date: September 15, 2022
 
 These are my notes about the main services and the infrastructure of Microsoft Azure.
 
-## Cloud concepts
+## Cloud Concepts
 
 ### What is cloud computing?
 
@@ -27,3 +27,25 @@ Simply put, cloud computing is the delivery of computing services—including se
 **Security**: Many cloud providers offer a broad set of policies, technologies and controls that strengthen your security posture overall, helping protect your data, apps and infrastructure from potential threats.
 
 [Source](https://azure.microsoft.com/en-in/resources/cloud-computing-dictionary/what-is-cloud-computing/)
+
+## Core Azure Services
+
+**Compute**: Azure Virtual Machines, Containers, Kubernetes Service
+
+**Network**: Azure Virtual Network (VNETs), Load Balancer, VPN Gateway, Application Gateway and CDN
+
+**Serverless**: Azure Function, Logic Apps
+
+**Storage**: Azure Blob Storage, Disk Storage, File Storage, Data Lake Storage
+
+**Database**: Azure SQL DB, SQL DW, CosmosDB
+
+**Management**: Azure CLI, Powershell, Portal, Advisor
+
+**Internet of Things (IoT)**: Azure IoT Hub, IoT Central
+
+**Big Data & Analytics**: Azure HDInsight, Data Lake Analytics, Databricks
+
+**AI**: Azure ML, ML Studio
+
+\*Many other services can be found [here](https://azure.microsoft.com/en-us/products/)
