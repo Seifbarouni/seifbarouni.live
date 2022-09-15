@@ -15,7 +15,7 @@ export default function Home() {
       </Head>
       <div className="flex flex-col  xl:px-72 md:px-16 justify-center">
         <div className="flex xl:flex-row flex-col xl:items-center justify-center xl:space-x-12">
-          <div className="relative h-36 w-36 rounded-full  xl:mt-0 mt-2">
+          <div className="relative sm:h-36 sm:w-36 h-20 w-20 rounded-full  xl:mt-0 mt-2">
             <Image
               className="rounded-full"
               src="/images/me.jpeg"
