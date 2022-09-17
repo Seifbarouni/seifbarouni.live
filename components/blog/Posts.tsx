@@ -13,9 +13,9 @@ interface PostProps {
   ]
 }
 
-const Post: React.FC<PostProps> = ({ dt }) => {
+const Posts: React.FC<PostProps> = ({ dt }) => {
   return (
-    <div className="flex flex-col pt-8 pb-64 sm:w-5/6 2xl:px-24 space-y-8 -ml-2">
+    <div className="flex flex-col pt-8 pb-36 sm:w-5/6 2xl:px-24 space-y-8 -ml-2">
       {dt.map((s) => {
         return (
           <Link href={`/blog/${s.slug}`}>
@@ -38,4 +38,4 @@ const Post: React.FC<PostProps> = ({ dt }) => {
     </div>
   )
 }
-export default Post
+export default Posts

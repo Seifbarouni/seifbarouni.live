@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import Post from '../../components/blog/Post'
+import Posts from '../../components/blog/Posts'
 
 import Layout from '../../components/shared/Layout'
 import { getAllDocs } from '../../lib/api'
@@ -29,9 +29,10 @@ export default function Blogs({ dt }: Post) {
           Blog
         </h1>
         <p className="dark:text-gray-500 text-gray-600 text-sm md:text-base 2xl:px-24 w-5/6 pt-4">
-          These are my notes when I'm learning new concepts and technologies.
+          Just keeping my notes and some resources that I find useful in one
+          place.
         </p>
-        <Post dt={dt} />
+        <Posts dt={dt} />
       </div>
     </Layout>
   )
