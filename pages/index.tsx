@@ -49,7 +49,10 @@ export default function Home() {
             <RecentProjects />
           </div>
           <h1 className="text-3xl 2xl:text-4xl dark:text-white text-black font-bold">
-            Tech Stack I use
+            Tech Stack I currently use <br />
+            <span className="text-base text-gray-500 font-normal">
+              (but I'm always exploring new technologies)
+            </span>
           </h1>
           <TechStack />
           <h1 className="text-3xl 2xl:text-4xl dark:text-white text-black font-bold">
