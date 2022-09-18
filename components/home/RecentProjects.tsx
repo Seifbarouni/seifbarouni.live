@@ -8,7 +8,7 @@ const RecentProjects: React.FC<RecentProjectsProps> = () => {
       <Project
         link="https://github.com/Seifbarouni/seifbarouni.live"
         title="seifbarouni.live"
-        description="My portfolio website whith a blog feature."
+        description="My portfolio website with a blog feature."
         used={['Next.js', 'Tailwind CSS', 'TypeScript']}
       />
       <Project
