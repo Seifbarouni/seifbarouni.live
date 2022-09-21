@@ -30,7 +30,7 @@ export default function Home() {
             </h1>
             <h2 className="text-gray-600 dark:text-gray-400 pt-4 ml-0.5 md:w-2/3 mb-16">
               I'm a Software Developer, cloud enthusiast and problem solver from
-              Tunisia. I'm currently Terraform. You can find
+              Tunisia. I'm currently learning Terraform. You can find
               my contact details{' '}
               <a
                 href="#footer"
