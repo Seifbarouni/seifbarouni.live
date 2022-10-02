@@ -9,7 +9,7 @@ const RecentProjects: React.FC<RecentProjectsProps> = () => {
         link="https://github.com/Seifbarouni/seifbarouni.live"
         title="seifbarouni.live"
         description="My portfolio website with a blog feature."
-        used={['Next.js', 'Tailwind CSS', 'TypeScript']}
+        used={['NextJS', 'TailwindCSS', 'TypeScript']}
       />
       <Project
         link="https://github.com/Seifbarouni/go-create"
@@ -27,7 +27,7 @@ const RecentProjects: React.FC<RecentProjectsProps> = () => {
         link="https://github.com/Seifbarouni/BraveBlog-frontend"
         title="Brave Blog"
         description="A blog built with React that has a simple livestream feature."
-        used={['React', 'Typescript', 'PostgreSQL', 'Tailwind']}
+        used={['ReactJS', 'Typescript', 'PostgreSQL', 'TailwindCSS']}
       />
     </div>
   )
