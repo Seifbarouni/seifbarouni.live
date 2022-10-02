@@ -39,4 +39,3 @@ If you can improve this list, feel free to open a PR.
 - [https://www.netlify.com/](https://www.netlify.com/)
 - [https://render.com/](https://render.com/)
 - [https://railway.app/](https://railway.app/)
-- [https://azure.microsoft.com/en-us/pricing/purchase-options/pay-as-you-go/](https://azure.microsoft.com/en-us/pricing/purchase-options/pay-as-you-go/)
