@@ -48,6 +48,14 @@ const TechStack: React.FC<TechStackProps> = ({}) => {
           MongoDB
         </a>
       </div>
+      <a
+        rel="noopener noreferrer"
+        href="https://azure.microsoft.com/en-us/"
+        target="_blank"
+        aria-label="Read more about Azure"
+      >
+        And hosting on Azure
+      </a>
     </div>
   )
 }

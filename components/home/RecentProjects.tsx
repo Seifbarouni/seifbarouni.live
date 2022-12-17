@@ -12,6 +12,12 @@ const RecentProjects: React.FC<RecentProjectsProps> = () => {
         used={['NextJS', 'TailwindCSS', 'TypeScript']}
       />
       <Project
+        link="https://github.com/Seifbarouni/azure-terraform"
+        title="azure-terraform"
+        description="Basic Azure Devops pipeline to provision Azure resources using Terraform."
+        used={['Terraform', 'Azure', 'Azure Devops']}
+      />
+      <Project
         link="https://github.com/Seifbarouni/go-create"
         title="go-create"
         description="A tool that helps me create my apps (console apps, back-end web apps, full-stack web apps)."
@@ -22,12 +28,6 @@ const RecentProjects: React.FC<RecentProjectsProps> = () => {
         title="go-config-server"
         description="App that provides an HTTP resource-based API for external configuration (YAML content)."
         used={['Golang', 'Microservices']}
-      />
-      <Project
-        link="https://github.com/Seifbarouni/BraveBlog-frontend"
-        title="Brave Blog"
-        description="A blog built with React that has a simple livestream feature."
-        used={['ReactJS', 'Typescript', 'PostgreSQL', 'TailwindCSS']}
       />
     </div>
   )

@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <Layout selected="home">
       <Head>
-        <title>Seif Barouni - Developer</title>
+        <title>Seif Barouni</title>
       </Head>
       <div className="flex flex-col  xl:px-72 md:px-16 justify-center">
         <div className="flex xl:flex-row flex-col xl:items-center justify-center xl:space-x-12">
@@ -30,8 +30,8 @@ export default function Home() {
             </h1>
             <h2 className="text-gray-600 dark:text-gray-400 pt-4 ml-0.5 md:w-2/3 mb-16">
               I'm a Software Developer, cloud enthusiast and problem solver from
-              Tunisia. I'm currently learning Terraform. You can find
-              my contact details{' '}
+              Tunisia. I'm currently learning Terraform and using Azure. You can
+              find my contact details{' '}
               <a
                 href="#footer"
                 className="text-blue-500 underline hover:cursor-pointer"
@@ -59,11 +59,21 @@ export default function Home() {
             Work experience
           </h1>
           <WorkExperience
+            jobTitle="Full stack developer"
+            company="Yellowsys"
+            startDate="Nov 2022"
+            endDate="Present"
+            whatIlearned={'Azure, Azure Devops, .NET'}
+            location="Tunis, Tunisia"
+          />
+          <WorkExperience
             jobTitle="Software engineer - Part time"
             company="Creometry"
             startDate="May 2022"
             endDate="August 2022"
-            whatIlearned={'Cloud technologies, kubernetes, rancher, vue, nuxt'}
+            whatIlearned={
+              'Cloud technologies, AWS, kubernetes, rancher, vue, nuxt'
+            }
             location="Tunis, Tunisia"
           />
           <WorkExperience
