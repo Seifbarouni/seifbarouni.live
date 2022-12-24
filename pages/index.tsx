@@ -29,9 +29,9 @@ export default function Home() {
               Seif Barouni
             </h1>
             <h2 className="text-gray-600 dark:text-gray-400 pt-4 ml-0.5 md:w-2/3 mb-16">
-              I'm a Software Developer, cloud enthusiast and problem solver from
-              Tunisia. I'm currently learning Terraform and using Azure. You can
-              find my contact details{' '}
+              I'm a Software Developer, Cloud and DevOps enthusiast and problem
+              solver from Tunisia. I'm currently learning Terraform and using
+              Azure. You can find my contact details{' '}
               <a
                 href="#footer"
                 className="text-blue-500 underline hover:cursor-pointer"
@@ -59,15 +59,15 @@ export default function Home() {
             Work experience
           </h1>
           <WorkExperience
-            jobTitle="Full stack developer"
+            jobTitle="DevOps Consultant"
             company="Yellowsys"
             startDate="Nov 2022"
             endDate="Present"
-            whatIlearned={'Azure, Azure Devops, .NET'}
+            whatIlearned={'Azure, Azure Devops, Terraform'}
             location="Tunis, Tunisia"
           />
           <WorkExperience
-            jobTitle="Software engineer - Part time"
+            jobTitle="DevOps Developer - Part time"
             company="Creometry"
             startDate="May 2022"
             endDate="August 2022"
