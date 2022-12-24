@@ -61,9 +61,9 @@ const FullTimeline: React.FC<FullTimelineProps> = ({}) => {
     <div className="pt-8 pb-8 sm:w-5/6 2xl:px-24">
       <Year>2022</Year>
       <ul>
-        <Achievement title="Got a full time job as a full stack developer at Yellowsys"></Achievement>
+        <Achievement title="Got a full time job as a devops consultant at Yellowsys"></Achievement>
         <Achievement title="Started the first semester of my fourth year of computer science"></Achievement>
-        <Achievement title="Got my first part time job as a software engineer">
+        <Achievement title="Got my first part time job as a devops developer">
           <p>
             Learning more about Kubernetes and how to use it to deploy
             applications.
