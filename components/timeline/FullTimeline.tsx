@@ -59,6 +59,30 @@ const Achievement: React.FC<AchievementProps> = ({ title, children }) => {
 const FullTimeline: React.FC<FullTimelineProps> = ({}) => {
   return (
     <div className="pt-8 pb-8 sm:w-5/6 2xl:px-24">
+      <Year>2023</Year>
+      <ul>
+        <Achievement title="Learned and used Azure (storage accounts, VMs, VNETs, app services ...)">
+          <p>
+            Azure is a cloud computing service created by Microsoft for
+            building, testing, deploying, and managing applications and services
+            through Microsoft-managed data centers.
+          </p>
+        </Achievement>
+        <Achievement title="Learned and used Kubernetes">
+          <p>
+            Kubernetes is an open-source container-orchestration system for
+            automating computer application deployment, scaling, and management.
+          </p>
+        </Achievement>
+        <Achievement title="Learned and used Terraform">
+          <p>
+            Terraform is an open-source infrastructure as code software tool
+            that provides a consistent CLI workflow to manage hundreds of cloud
+            services.
+          </p>
+        </Achievement>
+      </ul>
+      <Hr />
       <Year>2022</Year>
       <ul>
         <Achievement title="Got a full time job as a devops consultant at Yellowsys"></Achievement>
